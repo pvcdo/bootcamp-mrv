@@ -1,0 +1,48 @@
+*{
+    margin: 0;padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+main{
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+button{
+    padding: 5px;
+    border-radius: 5px;
+    background-color: #ebfaff;
+    color:lightskyblue;
+    border: 1px solid lightskyblue;
+}
+
+input{
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid #7c7c7c;
+}
+
+input:focus{
+    outline: none;
+}
+
+h1{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+#definir{
+    margin-bottom: 20px;
+}
+
+#todolist div{
+    display: flex;
+    flex-direction: row;
+}
+
+#todolist div p{
+    margin-left: 5px;
+}

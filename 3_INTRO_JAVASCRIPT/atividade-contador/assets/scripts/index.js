@@ -19,7 +19,7 @@ function somar(){
 function load(){
     let botao_menos = document.getElementById('btn-menos')
     let botao_mais = document.getElementById('btn-mais')
-    let count = parseFloat(document.getElementById('count').innerHTML)
+    //let count = parseFloat(document.getElementById('count').innerHTML)
 
     botao_menos.addEventListener('click',subtrair)
     botao_mais.addEventListener('click',somar)
