@@ -1,8 +1,14 @@
-function marcarFeita(id){
-    /*document.getElementById('p'+id).style.textDecoration = 'line-through'
-    document.getElementById('p'+id).style.color = '#ccc'*/
-
-    console.log(id)
+function marcarFeita(e){
+    
+    let id = e.target.id
+    let id_tarefa = id.substr(2,1)
+    let p = document.getElementById('p'+id_tarefa)
+    
+    if(e.target.checked){
+        p.className = 'feita'
+    }else{
+        p.className = 'nao_feita'
+    }
 }
 
 function addTarefa(){
@@ -11,8 +17,7 @@ function addTarefa(){
     document.getElementById('input_tarefa').value = ''
 
     //setando o valor do id para a tarefa
-    let id_tarefa = document.getElementById('todolist').childElementCount
-    id_tarefa = id_tarefa + 0
+    let id_tarefa = document.getElementById('todolist').children.length
 
     //criando um wrapper os elementos de checkbox e texto
     let wrapper = document.createElement('div')
@@ -33,7 +38,7 @@ function addTarefa(){
     document.getElementById('tarefa'+id_tarefa).appendChild(cb_tarefa)
     document.getElementById('tarefa'+id_tarefa).appendChild(p_tarefa)
 
-    document.getElementById('cb'+id_tarefa).addEventListener('change',(id_tarefa)=>marcarFeita(id_tarefa))
+    document.getElementById('cb'+id_tarefa).addEventListener('change',(e)=>{marcarFeita(e)})
 }
 
 function load(){

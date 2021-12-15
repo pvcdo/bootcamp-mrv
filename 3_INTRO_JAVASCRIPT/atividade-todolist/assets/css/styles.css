@@ -46,3 +46,13 @@ h1{
 #todolist div p{
     margin-left: 5px;
 }
+
+.feita{
+    color: grey;
+    text-decoration: line-through;
+}
+
+.nao_feita{
+    color: #000;
+    text-decoration: none;
+}
