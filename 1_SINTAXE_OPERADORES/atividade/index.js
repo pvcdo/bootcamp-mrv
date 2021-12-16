@@ -1,5 +1,5 @@
 function compararSomarComparar(a,b){
-    if(a && b){
+    if((a && b) && (!isNaN(a) && !isNaN(b))){
         const comparacao_inputs = a === b ? '' : 'não '
     
         const soma = a+b
@@ -20,9 +20,9 @@ function compararSomarComparar(a,b){
 
         console.log(`Os números ${a} e ${b} ${comparacao_inputs}são iguais. Sua soma é ${soma}, que é ${comparacao_soma}.`)
     }else{
-        console.log("Escreva dois valores")
+        console.log("Escreva dois valores númericos")
     }
     
 }
 
-compararSomarComparar(5,2)
+compararSomarComparar(5,5)
