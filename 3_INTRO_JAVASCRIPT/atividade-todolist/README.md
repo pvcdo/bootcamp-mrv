@@ -2,7 +2,7 @@
 
 ## Introdução
 
-Este projeto fez parte da aula de sintaxe e operadores de javascript da [DIO](https://web.dio.me/).
+Este projeto fez parte da aula "Introdução ao JavaScript" da [DIO](https://web.dio.me/).
 
 Representa um agendador de tarefas em HTML, CSS e JavaScript Vanilla.
 
@@ -10,11 +10,11 @@ Há um campo de texto para escrever a tarefa e um botão para relacionar a taref
 
 ***
 
-# Comparar, somar, comparar
+# To-do-list
 
 ## Introduction
 
-This project was part of the javascript syntax and operators class at [DIO](https://web.dio.me/).
+This project was part of the class "Introdução ao JavaScript" at [DIO](https://web.dio.me/).
 
 Represents a task scheduler done with HTML, CSS e Vanilla JavaScript.
 
