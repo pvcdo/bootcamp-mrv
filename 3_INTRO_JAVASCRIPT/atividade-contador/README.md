@@ -14,7 +14,7 @@ Os números negativos tem a cor vermelha. O intervalo válido é de -5 a 15.
 
 ## Introduction
 
-This project was part of the javascript syntax and operators class at [DIO] (https://web.dio.me/).
+This project was part of the javascript syntax and operators class at [DIO](https://web.dio.me/).
 
 Consists on creation of a counter using HTML, CSS and Vanilla JavaScript.
 

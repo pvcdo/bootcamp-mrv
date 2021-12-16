@@ -14,7 +14,7 @@ Há um campo de texto para escrever a tarefa e um botão para relacionar a taref
 
 ## Introduction
 
-This project was part of the javascript syntax and operators class at [DIO] (https://web.dio.me/).
+This project was part of the javascript syntax and operators class at [DIO](https://web.dio.me/).
 
 Represents a task scheduler done with HTML, CSS e Vanilla JavaScript.
 
