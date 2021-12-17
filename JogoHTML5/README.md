@@ -12,4 +12,6 @@ O objetivo do jogo é controlar um helicóptero para resgatar soldados em um cam
 
 ## Escalabilidade
 
-![loading](https://www.google.com/url?sa=i&url=https%3A%2F%2Fgiphy.com%2Fexplore%2Floading&psig=AOvVaw0U_V6fDAd4aLwup2OH87DX&ust=1639840269931000&source=images&cd=vfe&ved=0CAsQjRxqFwoTCNjb3ZiP6_QCFQAAAAAdAAAAABAD)
+-Criar fases
+-Habilitar "fogo amigo"
+-Criar um menu com opções do jogo
