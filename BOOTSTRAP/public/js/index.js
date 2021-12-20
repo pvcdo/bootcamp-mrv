@@ -4,12 +4,12 @@ function abreQr(img){
     const div_img = document.getElementById(`img-qrcode`)
     
     const img_append = document.createElement('img')
-    img_append.src = `./img/qrcode-${img}`//`./img/qrcode-${img}.png`
+    img_append.src = `public/img/qrcode-${img}`//`./img/qrcode-${img}.png`
     img_append.alt = `QR code do ${img}`
 
     div_img.style.width = '300px'
     div_img.style.height = '300px'
-    div_img.style.backgroundImage = `url("./img/qrcode-${img}.png")`
+    div_img.style.backgroundImage = `url("public/img/qrcode-${img}.png")`
     div_img.style.backgroundRepeat = 'no-repeat'//*/
     div_img.style.backgroundPosition = 'center'
     div_img.style.backgroundColor = '#fff'
