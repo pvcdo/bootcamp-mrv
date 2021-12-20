@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+
+    <!-- Personal css -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <script src="./js/index.js"></script>
+
+    <title>Paulo Oliveira</title>
+</head>
+
+<body class="d-flex vh-100 text-center text-light bg-dark">
+    <div class="container d-flex w-100 h-100 p-3 flex-column">
+        <header class="mb-auto">
+            <div>
+                <a href="#"><h3 class="float-md-start mb-0">Paulo Oliveira</h3></a>
+                <nav class="nav justify-content-center float-md-end">
+                    <a class="nav-link active" href="#">About</a>
+                    <a class="nav-link" href="#">Projects</a>
+                    <a class="nav-link" href="#">Contact</a>
+                </nav>
+            </div>
+        </header>
+
+        <main class="container">
+            <div class="row">
+                <div class="col-md-4"></div>
+                <div class='col-md-4 row'>
+                    <div class="col-md-6">
+                        <a href="https://github.com/pvcdo" onmouseover="abreQr('github')" onmouseleave="fechaQr('github')">GitHub</a>
+                    </div>
+                    <div class="col-md-6">
+                        <a class="mr-0" href="https://www.linkedin.com/in/opaulo/" onmouseover="abreQr('linkedin')" onmouseleave="fechaQr('linkedin')">Linkedin</a>
+                    </div>
+                </div>
+                <div class="col-md-4"></div>
+            </div>
+            
+        </main>
+        
+        <div style="width:300px; height:300px" id="img-qrcode" class="mx-auto mt-2 py-3"></div>
+
+        <footer class="mt-auto text-white-50">
+            <p>Built by me helped by <a href="https://getbootstrap.com/docs/5.1/examples/cover/">Bootstrap!</a></p>
+        </footer>
+    </div>
+</body>
+
+</html>
