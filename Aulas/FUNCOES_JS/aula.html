@@ -1,0 +1,194 @@
+<h1>Funções</h1>
+
+<h2>Tipos de pagâmetro</h2>
+
+<h3>Função autoinvocável</h3>
+
+<p>Segue o seguinte escopo:</p>
+
+<pre>
+    (
+        function(){
+            let name = 'Paulo'
+            console.log(name)
+        }
+    )();
+</pre>
+
+<p>Esse tipo de função já é automaticamente chamada.</p>
+    
+<p>A função autoinvocável também pode receber parâmetros e também ser armazenada em uma variável.</p>
+
+Ex1:
+<pre>
+    (
+        function(a,b){
+            return a+b
+        }
+    )(1,2);
+</pre>
+
+Ex2:
+<pre>
+    const soma3 = (
+        function(a,b){
+            return a+b
+        }
+    )(1,2);
+</pre>
+
+<H3>Callbacks</H3>
+
+<p>É uma função passada como argumento para outra função.</p>
+
+EX:
+
+<pre>
+    const calc = function(operacao,num1,num2){
+        return operacao(num1,num2)
+    }
+
+    const soma = function(num1,num2){
+        return num1 + num2
+    }
+
+    const sub = function(num1,num2){
+        return num1 - num2
+    }
+
+    const resultSoma = calc(soma,1,2)
+    const resultSub = calc(sub,1,2)
+</pre>
+
+<p>No exemplo acima, a função calc espera como argumento uma função (logo é uma função callback, já que é recebida por outra função "principal") que por sua vez recebe dois argumentos para realizar uma determinada operação dada pela função callback.</p>
+
+<h2>Parâmetros</h2>
+
+<h3>Valores padrão e objeto "arguments"</h3>
+
+<pre>
+    function dividir(num = 0, den = 1){
+        return num/den
+    }
+</pre>
+
+
+<h3>Arguments</h3>
+
+<p>Nós podemos passar argumentos para uma função que inicialmente não esperava argumentos. Nesse momento é criado no escopo da função um objeto denominado arguments que recebe como chave um índice iniciado em 0 e como valor o próprio argumento.</p>
+
+<h3>Arrays</h3>
+
+<h4>Spread</h4>
+
+<pre>
+    function sum(x,y,z){
+        return x + y + z
+    }
+
+    const numbers = [1,2,3]
+
+    sum(...numbers)
+</pre>
+
+<p>Os elementos do array são separados e cada um deles é passado como argumento.</p>
+
+<h4>Rest</h4>
+
+<p>É o contrário de Spread: cria um array com os argumentos que foram passados separados na função.</p>
+
+<pre>
+    function confereTamanho(...args){
+        console.log(args.length)
+    }
+
+    confereTamanho(1,2)
+</pre>
+
+<p>O rest é usado na declaração da função, o spread na chamada da função.</p>
+
+<h3>Objetos</h3>
+
+<h4>Destructuring</h4>
+
+<img src="./img/destructuring-obj.PNG" alt="exemplo-destructuring-obj">
+
+<h2>Loops</h2>
+
+<h3>If/Else</h3>
+
+<h3>Switch</h3>
+
+<p>O Switch sempre faz uma comparação de idêntico (===).</p>
+
+<p>O Switch sempre precisa de um "default".</p>
+
+<h3>For</h3>
+
+<h4>for...in - for...of</h4>
+
+<p>O loop do for...in retorna a chave. O for...of retorna os valores.</p>
+
+<h3>While</h3>
+
+<h2>This</h2>
+
+<img src="./img/this-exemplo.PNG" alt="this-exemplo">
+
+<p>A tabela abaixo tenta esclarecer qual a referência que o this faz dependendo do contexto no qual foi inserido.</p>
+<img src="./img/this-tabela.PNG" alt="this-tabela">
+
+<p style="color:grey">No caso de evento, se colocarmos uma função que responda a um evento de clique em um botão o this dentro desta função</p>
+
+<p style="color:grey">*******Tentei fazer um teste colocando o this fora de um método de objeto e ele simplismente não respondeu*********</p>
+
+<h3>Call</h3>
+
+<p>O método call vai procurar um this dentro da função na qual ele está atuando e vai referenciar o this desta função ao objeto que foi o argumento passado para o método call. Confuso? Veja o exemplo:</p>
+
+<img src="./img/this-call.PNG" alt="this-call">
+
+<p>Nós podemos também usar o call associado a mais argumentos de uma função. Ex:</p>
+
+<img src="./img/this-call-exemplo.PNG" alt="this-call-exemplo">
+
+<h3>Apply</h3>
+
+<p>A única diferença entre o call e apply é que neste quando na associação com outros argumentos de uma função os argumentos fora do this devem ser passados dentro de um array.</p>
+
+<img src="./img/this-apply-exemplo.PNG" alt="this-apply-exemplo">
+
+<h3>Bind</h3>
+
+<p>Retorna uma função substituindo o this.argumento pelo valor que tal argumento tem no objeto passado como parâmetro. Ex:</p>
+
+<img src="img/this-bind-exemplo.PNG" alt="this-bind-exemplo">
+
+<h2>Arrow functions</h2>
+
+<h3>Sintaxe</h3>
+
+<p>Instruções uma linha:</p>
+<code>
+    const nome_funcao = () => retorno
+</code>
+
+<p>Instruções com mais de uma linha:</p>
+<pre>
+    const nome_funcao = () => {
+        //instrução
+        //instrução
+    }
+</pre>
+
+<p>Funções com apenas um argumento não precisam encapsulá-lo em parênteses:</p>
+<pre>
+    const nome_funcao = a => {
+        //instrução
+        //instrução
+    }
+
+    nome_funcao(6)
+</pre>
+
+<p>Arrow function <b>NÃO</b> faz hoisting, ou seja, a chamada dela tem que ser feita depois da sua declaração. O this em arrow function sempre referencia o objeto global. Não existe arguments em arrow function</p>
