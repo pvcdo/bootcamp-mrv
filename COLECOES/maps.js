@@ -1,9 +1,9 @@
 function getAdmins(map){
     const ADMINS = []
 
-    for(let user of map){
-        if(user[1] === 'Admin'){
-            ADMINS.push(user[0])
+    for([key,value] of map){
+        if(value === 'Admin'){
+            ADMINS.push(key)
         }
     }
 
