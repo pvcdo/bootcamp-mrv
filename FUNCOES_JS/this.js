@@ -1,15 +1,13 @@
 const hoje = new Date()
-const idadeAtual = function(dn){
+const idadeAtual = function(){
 
     const ano_hoje = hoje.getFullYear()
     const mes_hoje = hoje.getMonth()
     const dia_hoje = hoje.getDate()
 
-    const ano_dn = dn.getFullYear()
-    const mes_dn = dn.getMonth()
-    const dia_dn = dn.getDate()
-
-    console.log(mes_dn, mes_hoje)
+    const ano_dn = this.dn.getFullYear()
+    const mes_dn = this.dn.getMonth()
+    const dia_dn = this.dn.getDate()
 
     if(ano_hoje > ano_dn){
         if(mes_hoje > mes_dn){
@@ -29,46 +27,38 @@ const idadeAtual = function(dn){
 
 }
 
+const dataN = (dia,mes,ano) => {
+    return new Date(ano,mes-1,dia)
+}
+
 const bezinho = {
     nome: 'Bernardo',
-    dn: new Date(2021,3,27),
-    idade: function(){
-        return idadeAtual(this.dn)
-    },
+    dn: dataN(27,04,2021),
 }
 
 const lala = {
     nome: 'Laís',
-    dn: new Date(1993,2,9),
-    idade: function(){
-        return idadeAtual(this.dn)
-    },
+    dn: dataN(09,03,2021)
 }
 
 const dada = {
     nome: 'Adailton',
-    dn: new Date(1961,6,4),
-    idade: function(){
-        return idadeAtual(this.dn)
-    },
+    dn: dataN(04,07,1961)
 }
 
 const paulo = {
     nome: 'Paulo',
-    dn: new Date(1992,9,6),
-    idade: function(){
-        return idadeAtual(this.dn)
-    },
+    dn: dataN(06,10,1992)
 }
 
-
-
 function calculaIdade(anos) {
-	return `${this.nome} tem ${this.idade()} anos. Daqui a ${anos} anos, ${this.nome} terá ${
-		this.idade() + anos
+    const idade_atual = idadeAtual.call(this)
+
+	return `${this.nome} tem ${idade_atual} anos. Daqui a ${anos} anos, ${this.nome} terá ${
+		idade_atual + anos
 	} anos de idade.`;
 }
 
-//console.log(calculaIdade.call(dada, 8))
+console.log(calculaIdade.call(paulo, 9))
 
-console.log(calculaIdade.apply(paulo, [8]))
+//console.log(calculaIdade.apply(paulo, [8]))
