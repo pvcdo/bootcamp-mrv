@@ -1,0 +1,34 @@
+<h1>Debugging e Error Handling</h1>
+
+<h2>Tipos de erros</h2>
+
+<h3>ECMAScript Error</h3>
+
+<p>Ocorre em tempo de execução. Vê que algo não foi declarado, que faltou alguma vírgula, etc...</p>
+
+<h3>DOMException</h3>
+
+<p>Erros relacionados ao código que está sendo consumido por uma página da web. Referente à árvore de estruturas da web.</p>
+
+<h2>Tratando erros</h2>
+
+<h3>Thow</h3>
+
+<p>É usado no mesmo contexto e forma de um return. O throw, porém, gera uma mensagem com "mais cara" de erro.</p>
+
+<h3>Try...catch[...finally]</h3>
+
+<p>O try...catch vai tentar executar o código no try e se der erro nós vamos capturar esse erro no catch e trabalhar com ele. O finally indica um trecho de código que será executado, independente se for instruído o retorno ou não de um erro.</p>
+
+<h2>Criando erros</h2>
+
+<h3>Objeto error</h3>
+
+<p>É uma classe do js.</p>
+
+<img src="img/obj_error_ex.PNG" alt="obj_error_ex">
+
+<p>Nós podemos criar a prop name para o erro e no console dele haverá a exibição desse name.</p>
+
+<img src="img/obj_error_name_ex.PNG" alt="obj_error_name_ex">
+
