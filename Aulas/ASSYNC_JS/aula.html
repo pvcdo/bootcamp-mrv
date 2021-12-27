@@ -1,0 +1,44 @@
+<h1>Javascript Assíncrono</h1>
+
+<h2>Assincronicidade</h2>
+
+<h3>Assincronicidade</h3>
+
+<p>Assíncrono é algo que não ocorre ou não se efetiva ao mesmo tempo. Ou seja, um processo pode começar enquanto outro ainda não terminou.</p>
+
+<h3>Promises</h3>
+
+<p>É um objeto de processamento assíncrono. Inicialmente de valor desconhecido e depois ela será resolvida (then()) ou rejeitada (catch()).</p>
+
+<p>Tem 3 estados, pending, fulfilled ou rejected.</p>
+
+<p>Abaixo segue um exemplo de uma promise completa </p>
+
+<img src="img/promise-ciclo.PNG" alt="promise-ciclo">
+
+<p>No exemplo acima, a palavra await é usada para se referir à promise já resolvida ou rejeitada e conseguirmos manipular seu retorno.</p>
+
+<h3>Async/await</h3>
+
+<p>async serve para mostrar que a função é assíncrona, ou seja, tem elementos assíncronos nela. O await serve para lidar com funções assíncronas; ele pára o código, espera a promise ser resolvida e depois libera novamente para que o código siga.</p>
+
+<img src="img/async-await.PNG" alt="async-await">
+
+<h2>Consumindo API's</h2>
+
+<h3>API's e fetch</h3>
+
+<p>É uma forma de intermediar o back e o front. Conseguimos acessar por url's. É muito comum o formato json para trânsito de dados de api's.</p>
+
+<p>O método fetch tem a seguinte sintaxe.</p>
+
+<img src="img/fetch-sintaxe.PNG" alt="fetch-sintaxe">
+
+<p>O fetch retorna uma promise, portanto preciamos usar o await.</p>
+
+<img src="img/fetch-exemplo.PNG" alt="">
+
+
+
+
+
