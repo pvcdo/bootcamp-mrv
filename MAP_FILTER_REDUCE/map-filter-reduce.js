@@ -41,7 +41,7 @@ console.log(pares)
 
 console.log('Executando array.prototype.reduce()')
 
-const SOMA = arr.reduce(function(ac,cv){return ac + cv})
+const SOMA = arr.reduce((ac,cv) => ac * cv)
 
 console.log(SOMA)
 

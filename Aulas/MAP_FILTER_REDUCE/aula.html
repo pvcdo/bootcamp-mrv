@@ -12,7 +12,7 @@
     }, [thisArg])
 </pre>
 
-<p>Importante notar que com arrow function o método pode dar errado.</p>
+<b style="color:red">Importante notar que com arrow function o método pode dar errado.</b>
 
 <h3>Map vs forEach</h3>
 
@@ -38,4 +38,4 @@
     },[initialValue])
 </pre>
 
-<p>Se o initialValue não for passado inicialmente ele será inicialmente undefined, mas depois assumirá o valor do primeiro elemento do array.</p>
+<p>Se o initialValue não for passado ele assumirá na primeira iteração o primeiro valor do array e o currentValue será o segundo, seguindo as iterações normalmente; caso o initialValue seja passado, o valor do currentValue será o primeiro valor do array.</p>
