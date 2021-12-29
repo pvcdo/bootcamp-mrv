@@ -3,7 +3,13 @@
 }
 
 body{
-    background-color: #e5e8e8
+    background-color: #e5e8e8;
+    color: #2F3337;
+}
+
+body.dark-mode{
+    background-color: #2F3337;
+    color: #e5e8e8;
 }
 
 .bv{
@@ -46,4 +52,9 @@ footer{
     display: flex;
     justify-content: center;
     color: #e5e8e8;
+}
+
+footer.dark-mode{
+    background-color: #e5e8e8;
+    color: #2F3337;
 }
