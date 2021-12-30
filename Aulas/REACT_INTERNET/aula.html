@@ -1,0 +1,142 @@
+<h1>Desenvolvimento de aplicações para internet com ReactJS</h1>
+
+<a href="https://github.com/eduardogc/digital-one-react-intermediario">GitHub da aula do professor</a>
+
+<h2>Estilização de componentes</h2>
+
+<p>Há três maneiras de estilizar elementos no ReactJS.</p>
+
+<ul>
+    <li>Inline</li>
+    <li>Classes</li>
+    <li>CSS in JS</li>
+</ul>
+
+<h3>Inline</h3>
+
+<p>Exs.:</p>
+<img src="img/estilo-inline.PNG" alt="">
+<img src="img/estilo-inline2.PNG" alt="">
+
+<p>Vantagens</p>
+<ul>
+    <li>Maneira mais prática</li>
+    <li>Ajustes rápidos</li>
+    <li>Testes de estilo</li>
+</ul>
+
+<p>Desvantagens</p>
+
+<ul>
+    <li>Difícil manutenção.</li>
+</ul>
+
+<h3>Classes</h3>
+
+<img src="img/estilo-classes.PNG" alt="">
+
+<p>Vantagens</p>
+<ul>
+    <li>Maneira mais prática e direta</li>
+</ul>
+
+<p>Desvantagens</p>
+<ul>
+    <li>Difícil manutenção</li>
+    <li>Pouca flexibilidade</li>
+    <li>Conflitos com nomes</li>
+</ul>
+
+<h3>CSS in JS</h3>
+
+<p>O próprio JavaScript gera CSS para nós. O método mais utilizado é através do styled-components</p>
+
+<p>Vantagens</p>
+<ul>
+    <li>Facilidade de remover css</li>
+    <li>Estilos dinâmicos</li>
+    <li>Performance</li>
+    <li>Injeção automática de prefixos vendor (-moz, -webkit, etc)</li>
+</ul>
+
+<h2>Stateful vs Stateless</h2>
+
+<p>Stateful usa estados, ou seja, tem o useState no código; stateless não utiliza.</p>
+
+<H2>Formulários no ReactJS</H2>
+
+<h3>Componente controlado</h3>
+
+<p>Select, input ou textarea aceitam o atributo value e nós podemos mudá-lo usando o atributo onChange. Os estados são utilizados para definir as ações do projeto.</p>
+
+<h3>Componente não controlado</h3>
+
+<p>Usado para inputs read-only, como envio de arquivos. O react orienta usar todos o máximo de componentes controlados possível.</p>
+
+<a href="https://goshacmd.com/controlled-vs-uncontrolled-inputs-react/"></a>
+
+<p>É possível usar bibliotecas de form para facilitar o trabalho no REACT. A Formik e o Redux-forms são as mais populares.</p>
+
+<h2>O que é o Flux?</h2>
+
+<p>É uma arquitetura para comunicação entre componetes React. É um padrão de projeto para tráfego de dados de maneira unidirecional.</p>
+
+<h3>Action</h3>
+
+<p>Formata a mensagem a ser enviada. Quando precisamos alterar um estado a action formata a mensagem.</p>
+
+<h3>Dispatcher</h3>
+
+<p>Entrega a mensagem dada pela action à callback correta.</p>
+
+<h3>Store</h3>
+
+<p>Guarda todos os estados e faz as as alterações.</p>
+
+<h3>View</h3>
+
+<p>"Middleware" entre a store e a tela, vê as alterações e solicita a atualização da tela (o react por exemplo é a camada de view).</p>
+
+<p>Redux é implementação mais popular de flux.</p>
+
+<h2>O que é o Redux?</h2>
+
+<p>Criado por Dan Abramov e Andrew Clark em 2015.</p>
+
+<img src="img/redux.PNG" alt="">
+
+<p>Diferentemente do flux raíz, não tem o dispatcher e tem também o componente chamado de reducer. A camada de view no esquema foi chamada de React.</p>
+
+<p>No flux tem várias stores. No redux apenas um. O State é read-only e as mudanção são feitas por pure functions (estado imutável).</p>
+
+<h3>Actions</h3>
+
+<p>São como as do flux, mas com uma direrença, não enviam a action ao dispatcher (que não existe), mas retornam um objeto action formatado.</p>
+
+<h3>Store</h3>
+
+<p>Cuida de toda a árvore de estados.</p>
+
+<h3>Reducer</h3>
+
+<p>Pega o estado da store e o divide para pequenos reducers descobrirem como lidar com ele.</p>
+
+<h3>Views</h3>
+
+<p>Utilizando o React temos 3 conceitos de conexão da view com o store</p>
+
+<ul>
+    <li>Provider - wrapper da árvore de componentes. Tornar mais fácil a conexão dos filhos à Store a partir do connect.</li>
+    <li>connect() - é uma função do react-redux. Se um comp deseja pegar os updates do estado ele usa a função connect()</li>
+    <li>selector - a conexão do comp é feita utilizando o selector, que é uma função escrita por nós indicando quais estados do redux que queremos passar como props.</li>
+</ul>
+
+<h2>Prática com Redux</h2>
+
+<p>É preciso dar <b>npm i react-redux</b> e <b>npm i --save-dev redux-devtools</b> para trabalhar com o redux no react. Nós também temos que instalar a extensão <b>Redux DevTools</b></p>
+
+<p>O professor usou o projeto contador da <a href="https://github.com/eduardogc/digital-one-react-intermediario/tree/master/src/aula-2">aula 2</a>, além do index.js e a pasta redux da <a href="https://github.com/eduardogc/digital-one-react-intermediario/tree/master/src">src</a>.</p>
+
+<p>Podemos ver no projeto da aula a utilização do provider, actions, reducers, connect, entre outros conceitos passados nas aulas desta seção de redux.</p>
+
+<p>Ao clicar nos botões nós podemos abrir o inspetor do google e ir na aba Redux para fazer a análise do react.</p>
