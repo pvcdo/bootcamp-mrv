@@ -40,7 +40,7 @@ class ContaCorrente extends ContaBancaria{
         numero,
         cartaoCredito
     ){
-        super()//o método super vai "puxar" os parâmetros métodos da classe pai
+        super()//o método super vai "puxar" os parâmetros e métodos da classe pai
         this.agencia = agencia
         this.numero = numero
         this.tipo = 'corrente'

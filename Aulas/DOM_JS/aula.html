@@ -1,0 +1,56 @@
+<H1></H1>
+
+<H2>O que é o DOM</H2>
+
+<p>É um padrão de como manipular elementos HTML de uma página.</p>
+
+<h3>BOM</h3>
+
+<p>Browser Object Model é o objeto que representa a janela do browser. É acessado nos browsers pela palavra "window". O BOM é o pai do DOM.</p>
+
+<h2>Métodos</h2>
+
+<p>Estrutura:</p>
+
+<ul>
+    <li>tag => ex: &lt;p&gt; / &lt;body&gt; / &lt;html&gt;</li>
+    <li>id => identificador único</li>
+    <li>class => identificador múltiplo</li>
+</ul>
+
+<p>Nós podemos a partir do DOM (document) procurar os elementos da página html por sua tag, id ou class, sendo que o id é o método que vai retornar apenas um elemento, os outros retornam um array.</p>
+
+<p>Outro seletor é o querySelectorAll, no qual passamos tag, classe ou id e volta um array com esses elementos.</p>
+
+<p>É sempre interessante selecionar os elementos pelo id, pensando na escalabilidade que o site pode ter.</p>
+
+<ul>
+    <li>document.createElement(element) = criar um elemento html na página</li>
+    <li>document.removeChild(element) = remove filhos da página</li>
+    <li>document.appendChild(element) = adiciona um elemento na página</li>
+    <li>document.replaceChild(element) = substitui um elemento na página</li>
+</ul>
+
+<h2>Trabalhando com estilos</h2>
+
+<p>Element.classList => representa a lista de classes</p>
+
+<ul>
+    <li>.add = adiciona uma classe no elemento</li>
+    <li>.remove = remove</li>
+    <li>.toggle = adiciona a classe se ela não existe e remove se ela existe.</li>
+</ul>
+
+<p>Para colocar um css direto pelo javascript nós usamos Element.style.[propriedade]</p>
+
+<h2>Eventos</h2>
+
+<p>São ações que o usuário faz na página. Os mais comuns são:</p>
+
+<ul>
+    <li>mouseouver, mouseout</li>
+    <li>click, dbclick (duplo clique)</li>
+    <li>change (quando um campo muda), load (quando o elemento acaba de carregar)</li>
+</ul>
+
+<p>Para acioná-lo nós damos Element.addEventListener('evento',função). Para colocá-lo diretamente pelo html os termos vem com o termo "on" na frente do evento (ex.: click (js) => onclick (html)).</p>
