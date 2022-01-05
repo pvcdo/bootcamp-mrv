@@ -1,0 +1,87 @@
+<h1>SQL SERVER - Criando suas primeiras consultas</h1>
+
+<h2>O que é SQL Server?</h2>
+
+<h3>Por que armazenar dados?</h3>
+
+<p>É uma forma de guardar informações hoje para usar no futuro, compartilhando isso entre as pessoas. Um exemplo é o controle das informações de um negócio.</p>
+
+<h3>O que são bancos de dados</h3>
+
+<p>É um lugar onde nós guardamos os dados. Pode-se usar o Excel, mas o processo é mais lento e criar vários problemas. O uso de bancos de dados, como o SQL Server, auxilia nessa tarefa, tornando a criação, leitura, modificação e exclusão de dados atividades mais rápidas e certeiras.</p>
+
+<h3>O que são SGBD's</h3>
+
+<p>São softwares que padronizam os bancos de dados. Existe uma interface onde nós podemos manipular um dado. No SGBD nós podemos criar níveis de manipulação dos dados para os usuários, onde alguns arquivos alguns usuários não tem permissão de acesso.</p>
+
+<h3>Tipos de bancos de dados</h3>
+
+<h4>Relacionais (SQL)</h4>
+
+<p>Sistemas que precisam de uma confiabilidade grande de dados, não podemos ter vendas duplicadas, precisamos ter um controle forte de estoque, nós queremos uma melhor garantia do dado </p>
+
+<h4>Não relacionais (NoSQL)</h4>
+
+<p>Voltados para melhor performance, grandes quantidades de dados, melhores para big data. Já tem ferramentas prontas.</p>
+
+<h2>Representação de um banco</h2>
+
+<p>Um banco de dados possui tabelas que tem linhas e colunas. Cada linha é um registro e cada coluna é uma característica dos registros. Um dado é o cruzamento de uma linha e coluna de uma tabela de um banco. Cada dado tem um tipo específico.</p>
+
+<p>Os bancos relacionais possuem a propriedade de atomicidade, que é a necessidade de se obter a chave exata para realizar uma operação. Outra propriedade é a consistência dos dados, onde caso haja bancos espelhados, um dado só será persistido depois de atualizados os valores em todos os espelhamentos.</p>
+
+<h2>Instalação do SQL Server</h2>
+
+<p>Entramos na <a href="https://www.microsoft.com/pt-br/sql-server/sql-server-downloads">página de download do SQL Server da Microsoft</a> e fazemos o download da versão Express, que é a gratuita e procedemos a instalação do tipo básico.</p>
+
+<p>Depois de finalizada a instalação são dadas algumas informações sobre a cadeia de conexão, administradores, recursos instalados, versão, entre outros. Ao clicar no botão "Conectar Agora" nós podemos ter acesso já ao sql server e executar queries. Porém essa interface é ruim e será instalado o SSMS (SQL Server Management Studio), que é uma ferramenta melhor para manipularmos os banco de dados.</p>
+
+<p>Para instalarmos o SSMS clicamos no botão de instalação do painel final de instalação do SQL Server. Isso fará com que sejamos direcionados pelo browser para uma página web com a opção de download. Depois de fazer o download procedemos a instalação.</p>
+
+<p>Para abrir o SSMS nós vamos no menu de ferramentas > Microsoft SQL Server Tools 18 > Microsoft SQL Server Management Studio 18 e é aberta a janela do programa. Na abertura há a exibição de uma caixa de diálogo onde podemos setar alguns itens, mas inicialmente não é necessário, bastando apenas clicar em "Conectar". Ao realizar a conexão já podemos clicar em "Nova Consulta" e realizar os comandos SQL para manipulação dos bancos existentes.</p>
+
+<h2>Criando o primeiro banco de dados no SSMS</h2>
+
+<p>Bancos relacionais são altamente tipados, ou seja, cada coluna possui um tipo e só é possível colocar o tipo de dado especificado na tabela de um banco.</p>
+
+<p>Tipos de dados</p>
+
+<ul>
+    <li>int</li>
+    <li>bigint - número grande</li>
+    <li>varchar(tamanho &lt; 4000) - o varchar só armazena o que foi passado, se tivermos um varchar(3) e for passado o valor 'a' será armazenado o valor 'a'. A busca no varchar é mais lento que o char.</li>
+    <li>char(tamanho) - o char armazena sempre o máximo de dados que consegue. Portanto, se tivermos um char(3) e passarmos o valor 'a' na coluna, o que será armazenado sera 'a',vazio,vazio. char faz uma busca mais rápida.</li>
+    <li>bit - 0 ou 1</li>
+</ul>
+
+<p>null ou not null à frente do tipo indica que a coluna aceita ou não dados sem valor atribuído.</p>
+
+<p>A criação de tudo no banco de dados foi feita a partir de comandos SQL.</p>
+
+<h2>Primeiras instruções SQL</h2>
+
+<ul>
+    <li>
+        <h4>Insert</h4>
+        <p>Instrução para inserir dados em colunas de uma tabela. Colocar ; no final sempre. Há variações da forma de declarar o insert, mas manterei o entendimento da forma seguinte para evitar confusão.</p>
+        <p>INSERT INTO tabela (coluna1, colunaN) VALUES (valor1, valorN);</p>
+    </li>
+    <li>
+        <h4>Select</h4>
+        <p>Instrução para selecionar colunas da tabela. Podemos também selecionar quais linhas queremos através do where</p>
+        <p>SELECT coluna1, colunaN (ou * para mostrar todas as colunas) FROM tabela</p>
+        <p>SELECT coluna1, colunaN (ou * para mostrar todas as colunas) FROM tabela WHERE colunaX = 'filtro'</p>
+    </li>
+    <li>
+        <h4>Update</h4>
+        <p>Atualizar dados. <b style="color: red">MUITO IMPORTANTE LEMBRAR DE COLOCAR O WHERE PARA EVITAR ATUALIZAR A TABELA INTEIRA</b></p>
+        <p>UPDATE tabela SET colunas_a_atualizar WHERE colunaX = 'filtro'</p>
+    </li>
+    <li>
+        <h4>Delete</h4>
+        <p>Deleta registros</p>
+        <p>DELETE from tabela WHERE colunaX = 'filtro'</p>
+    </li>
+</ul>
+
+<P>As instruções WHERE aceitam os operadores AND e OR para compor filtros mais complexos.</P>
