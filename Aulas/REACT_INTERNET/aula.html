@@ -140,3 +140,117 @@
 <p>Podemos ver no projeto da aula a utilização do provider, actions, reducers, connect, entre outros conceitos passados nas aulas desta seção de redux.</p>
 
 <p>Ao clicar nos botões nós podemos abrir o inspetor do google e ir na aba Redux para fazer a análise do react.</p>
+
+<h2>Rest HTTP com React</h2>
+
+<p>Nativamente nós temos o fetch api e tem a lib externa axios.</p>
+
+<p>Servem para conectar um ou mais servidores HTTP. Têm os seguintes métodos:</p>
+
+<ul>
+    <li>GET - para listagem</li>
+    <li>post criacao</li>
+    <li>delete deleção</li>
+    <li>put alteracao, algumas patch mas depende do caso</li>
+</ul>
+
+<h3>Fetch API</h3>
+
+<ul>
+    <li>GET</li>
+    <li>post</li>
+    <li>delete</li>
+    <li>put</li>
+</ul>
+
+<p>A fetch api é uma alternativa ao XMLHttpRequest()  ao jQuery.ajax(). Suporte a service workers. Não envia ou recebe cookies. Não rejeito o status do erro HTTP (nem se for 404, nem 500).</p>
+
+<p>A resposta inicial do fetch é por padrão uma promise pending, portanto, temos que passar duas then, sendo que a primeira nós parseamos para json a resposta.</p>
+
+<p>No exemplo de delete e de put, api tem que estar configurada para conseguir acessar os dados pela url.</p>
+
+<H3>Axios</H3>
+
+<p>É cross-browser, pois é baseada no XMLHttpRequest(). Pode monitorar o processo de um request. Melhor tratamento de erros e testes.</p>
+
+<p>Para usar o axios tem que instalar por npm ou yarn.</p>
+
+<ul>
+    <li>GET</li>
+    <li>post</li>
+    <li>delete</li>
+    <li>put</li>
+</ul>
+
+<p>No axios, como pode ser visto no exemplo do get, a promise já vem resolvida, então conseguimos já pegar o dado ou tratar o erro.</p>
+
+<h3>Exemplos do professor</h3>
+
+<p><a href="https://github.com/eduardogc/digital-one-react-intermediario/blob/master/src/aula-3/Components/Topico1.jsx">fetch-api .get</a> (linha 22).</p>
+
+<h2>Imutabilidade e Redux</h2>
+
+<h3>Pilares da imutabilidade</h3>
+
+<p>Coleção é uma unidade ou um conjunto (um array).</p>
+
+<ul>
+    <li>uma vez criada, uma coleção não pode ser alterada</li>
+    <li>novas coleções podem ser criadas baseadas e uma coleção anterior</li>
+    <li>novas coleções são criadas usando o máximo possível da coleção original</li>
+</ul>
+
+<p>Usar imutabilidade é importante para ganho de performance. Podemos ter isso com o uso do shouldComponentUpdate ou React.PureComponent</p>
+
+<p>O virtual DOM só vai atualizar o componente quando houver alteração do estado do componente. Utilizando estruturas imutáveis temos controle sobre a rerenderização</p>
+
+<p>Imutabilidade é você criar cópias das variáveis que você quer usar, mas não apenas usar referências, mas sim o spread, por exemplo. O professor também sugeriu a biblioteca Immutable.js, além da Immer, Immutability-helper, Seamless-immutable.</p>
+
+<p>A imutabilidade é pré-requisito no Redux. Redux e react-redux utilizam comparações rasas. O reducer divide a store e o combine reducer checa as mudanças de forma asa, fazendo a interação dos reducers e cria uma nova store a partir desses reducers. Cada um dos componentes é verificado se houve mudanças, caso haja esse componente atualizado é carregado no novo objeto de store.</p>
+
+<p>connect gera componentes que fazem comparação rasa com o estado root. Também faz a verificação de necessidade de re-render.</p>
+
+<h2>Redux + Rest</h2>
+
+<p>Redux middlwares são usados como camadas entre o disparo de uma ação e o momento que ela atinge o reducer.</p>
+
+<p>Sua criação é bem complexa. Nós podemos usar as libs redux-thunk e redux-saga.</p>
+
+<a href="https://github.com/eduardogc/digital-one-react-intermediario/blob/master/src/redux/reducers/cientistas.js">Exemplo reducers</a>
+
+<p><a href="https://github.com/eduardogc/digital-one-react-intermediario/tree/master/src/aula-3/Components/Topico3">"Tópico 3"</a> = Arquivo de fetch (dispatcher) e a forma final de como conectar a app no React-Redux.</p>
+
+<h2>Testes TDD e BDD</h2>
+
+<h3>TDD</h3>
+
+<p>Test-Driven Development (desenvolvimento orientado a testes). Tem por objetivo escrever um código para testar códigos, para antecipar erros a nível de desenvolvimento. Geralmente escrito antes da escrita da funcionalidade.</p>
+
+<p>Primeiro cria-se um código de teste para a funcionalidade que irá quebrar, e depois criamos a funcionalidade. Depois criamos um teste que irá passar e refatoramos.</p>
+
+<ul>
+    <li>Teste unitário</li>
+    <li>Teste end-to-end (e2e)</li>
+</ul>
+
+<p>No teste unitário testa-se as unidades, ou seja, uma função, componente, serviço ou página.</p>
+
+<p>e2e é ponta a ponta, testa o fluxo.</p>
+
+<p>Ferramentas e maneiras diferentes de fazer o unitário e o e2e.</p>
+
+<p>Num teste unitário no jest, nós chamamos o método nativo "describe" que recebe uma string descrevendo o que é o teste e uma função anônima que por sua vez executa o método it que também recebe uma string de descrição indicando o que queremos que aconteça e uma função anônima que executará uma chamada da função que queremos testar (passando seus argumentos ou não) e o método expect que recebe a função chamada e o que deve acontecer para o teste passar. Ex:</p>
+
+<img src="img/jest-ex1.PNG" alt="">
+<img src="img/jest-ex2.PNG" alt="">
+
+<p>É importante fazer o teste antes da escrita da funcionalidade para que esta funcionalidade já seja escrita de modo a suportar testes.</p>
+
+<p>Para fazer esses testes no React podemos usar o jest (que já vem embarcada no create-react-app), react-testing-library, shallow, enzyme, chai, mocha, selenium, puppeteer (roda em cima do browser).</p>
+
+<p>Para testar componentes em react temos que usar a react-testing-library, instalando @testing-library/react e @testing-library/jest-dom-extend-expect como --dev</p>
+
+<img src="img/testingLibrary-ex1.PNG" alt="">
+<img src="img/testingLibrary-ex2.PNG" alt="">
+
+<p>No exemplo, baseElement é algo relacionado ao render, não ao teste em si.</p>
