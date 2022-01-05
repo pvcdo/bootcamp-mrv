@@ -253,4 +253,42 @@
 <img src="img/testingLibrary-ex1.PNG" alt="">
 <img src="img/testingLibrary-ex2.PNG" alt="">
 
-<p>No exemplo, baseElement é algo relacionado ao render, não ao teste em si.</p>
+<p>No exemplo, baseElement não é uma tag ou método do teste, mas sim um dos atributos relacionados ao render o qual podemos manipular.</p>
+
+<H3>BDD</H3>
+
+<p>Behavior-Driven Development são testes baseados em comportamento. Prevê a união da especificação com o teste. Une teste automatizado, especificação e premissa de teste.</p>
+
+<h4>Sintaxe Gherkin</h4>
+
+<img src="img/gherkin.PNG" alt="">
+
+<p>Pode-se usar em português, inglês ou qualquer outra lingua, mas o mais usual é que seja em inglês. Há palavras reservadas para que a sintaxe funcione (Funcionalidade, Cenário, Dado, Quando, E, Então).</p>
+
+<p>Jest-cucumber e chai são as libs mais usadas para teste BDD. O jest-cucumber baixado no npm como --dev jest-cucumber.</p>
+
+<p>Temos que criar um documento .feature com o conteúdo em sintaxe Gherkin e depois um documento .test.js para usar essa .feature e ver se o fluxo está funcionando.</p>
+
+<h2>Debugging</h2>
+
+<p>Processo de encontrar e reduzir defeitos de um software. Podemos procurar no olho, ficar colocando console.log ou utilizar ferramentas, que é o foco da aula.</p>
+
+<p>Algumas ferramentas são o Chrome (Mozilla), Redux ou React DevTools, sendo esses últimos instalados no navegador.</p>
+
+<p>Com o DevTools do navegador nós podemos colocar a tag debugger no código e assim, quando chegar nela o navegador para a interpretação do código e nós podemos procedê-la manualmente.</p>
+
+<p>O React e Redux devtools, depois de instalados podem ser acessados no devtools do navegador.</p>
+
+<p>No devtools do chrome há de forma nativa a possibilidade de analisar a performance da página, mostrando o que está bom ou não e como melhorar.</p>
+
+<h2>Tratamento de erros</h2>
+
+<p>Trazer resiliência e segurança ao software. Um dos tipos de tratamentos de erros é evitá-los.</p>
+
+<p>Em forms, é importante colocar Captcha, evitar, onde possível, o uso de caracteres especiais e datas inválidas. Além disso é importante dar mensagens de erro informando ao usuário o que foi feito de errado. As mensagens de erro devem ser inteligentes para não expor de forma inocente o comportamento do back.</p>
+
+<p>Em componentes, um jeito de evitar entradas indesejadas é chamar o método propTypes. Ex.:</p>
+
+<img src="img/erros-proptypes.PNG" alt="">
+
+<p>No exemplo acima, o name tem que ser uma String, se não não será aceito.</p>
