@@ -64,7 +64,8 @@
     <li>
         <h4>Insert</h4>
         <p>Instrução para inserir dados em colunas de uma tabela. Colocar ; no final sempre. Há variações da forma de declarar o insert, mas manterei o entendimento da forma seguinte para evitar confusão.</p>
-        <p>INSERT INTO tabela (coluna1, colunaN) VALUES (valor1, valorN);</p>
+        <p><b>Padrão:</b>INSERT INTO tabela (coluna1, colunaN) VALUES (valor1, valorN);</p>
+        <p><b>Forma1: INSERT tabela (valor1, valor2, ..., valorN)</b></p>
     </li>
     <li>
         <h4>Select</h4>
@@ -75,7 +76,7 @@
     <li>
         <h4>Update</h4>
         <p>Atualizar dados. <b style="color: red">MUITO IMPORTANTE LEMBRAR DE COLOCAR O WHERE PARA EVITAR ATUALIZAR A TABELA INTEIRA</b></p>
-        <p>UPDATE tabela SET colunas_a_atualizar WHERE colunaX = 'filtro'</p>
+        <p>UPDATE tabela SET colunas_a_atualizar = novo_valor WHERE colunaX = 'filtro'</p>
     </li>
     <li>
         <h4>Delete</h4>
@@ -85,3 +86,58 @@
 </ul>
 
 <P>As instruções WHERE aceitam os operadores AND e OR para compor filtros mais complexos.</P>
+
+<p>O professor inseriu alguns dados de produtos, de pedido (sendo passado como valor de DataSolicitação o método getdate() que retorna a data e hora atuais)</p>
+
+<p>É possível colocar case-when-then-else-end em um select antes do from, entre outras funções e operadores que podem ser usadas.</p>
+
+<p>Para criar colunas temos em uma tabela já criada podemos dar o comando <b>ALTER TABLE tabela ADD coluna tipo</b></p>
+
+<h2>Chaves primárias e estrangeiras</h2>
+
+<h3>Chave primária</h3>
+
+<p>Chave primária é uma forma de identificar um registro. Uma chave única que gera melhor performance na busca, retornando a query de forma mais rápida ao ser feita a consulta por ela.</p>
+
+<p>Não necessariamente a chave primária é a coluna identidade, mas sim é uma coluna que não tem valores que se repetem.</p>
+
+<p>Um CPF pode ser uma chave primária, mas é mais comum criar uma coluna númerica para isso. A chave primária também pode ser associada a mais de uma coluna.</p>
+
+<p>No SQL Server, para informar que uma chave primária devemos primeiramente dar o comando <b>ALTER TABLE tabela ADD CONSTRAINT nome_chave PRIMARY KEY (coluna)</b>. Depois nós clicamos com o direito sobre a tabela, vamos em design, selecionamos a coluna, na parte de baixo ticamos que a coluna é identidade, colocamos autoincremento se quisermos, e na barra de tarefas clicamos em chave primária.</p>
+
+<h3>Chave estrangeira</h3>
+
+<p>A chave estrangeira é uma cópia de uma chave primária (mesmo número de colunas da chave primária e mesmo tipo) e faz referência a essa chave primária. A chave estrangeira de uma tabela, portanto, se relaciona com a chave primária de uma outra.</p>
+
+<p>Para criar uma chave estrangeira, nós damos o comando <b>ALTER TABLE tabela_foreign ADD CONSTRAINT nome_chave FOREIGN KEY (coluna_foreign) REFERENCES tabela_primary (coluna_primary)</b> e depois definimos os relacionamentos.</p>
+
+<h2>Normalização</h2>
+
+<p>Não deve haver um conjunto de colunas repetidos ou um conjunto de informações em apenas uma propriedade. É interessante sempre pensar a arquitetura do banco de dados de forma a evitar a criação de colunas em uma tabela posteriormente.</p>
+
+<p>Mapear os relacionamentos entre as tabelas para desenhar tanto as tabelas quanto o banco da melhor forma possível.</p>
+
+<h2>Comando JOIN</h2>
+
+<ul>
+    <li>
+        <p>Inner join</p>
+        <p>Retorna todas as colunas das tabelas relacionadas onde os dados satisfaçam a condição estabelecida no método on</p>
+    </li>
+    <li>
+        <p>left join</p>
+        <p>Retorna todos os dados da tabela à esquerda e as informações da tabela à direita que se relacionam com a primeira</p>
+    </li>
+    <li>
+        <p>right join</p>
+        <p>Retorna todos os dados da tabela à direita e as informações da tabela à esquerda que se relacionam com a primeira</p>
+    </li>
+</ul>
+
+<p>Podemos colocar where nos join, mas ele vai valer para a query final. Podemos também ir "concatenando" joins.</p>
+
+<p>Existem funções de soma, média, contagem entre outras para trabalhar em uma query select.</p>
+
+<p>Podemos ordenar a query através do comando order by passando a coluna e indicar se queremos ordem crescente (default) ou decrescente (desc).</p>
+
+<p></p>
