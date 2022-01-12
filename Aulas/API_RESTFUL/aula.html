@@ -1,0 +1,43 @@
+<h1>Introdução a API's e métodos HTTP</h1>
+
+<h2>O que é API</h2>
+
+<P>Aplication Program Interface. É uma camada que esconde as regras e possibilita comunicação externa. Facilita muito a integração pois os programas tem que se comunicar com outras tecnologias e aplicações. Para consumir um serviço de uma API não é necessário usar a mesma linguagem de criação da API. Existem várias metodologias para criar uma API, como o SOA, Rest ou por meio de SDK. A maioria das API atuais utilizam JSON.</P>
+
+<h2>O que são HTTP Methods e Status Code</h2>
+
+<p>Rest é um conjunto de regras para consumir uma API e RESTFUL é uma API que utiliza REST. Como parte dessas regras está o padrão de utilização dos métodos http conforme a seguir: </p>
+
+<ul>
+    <li>Get expera a obtenção de dados;</li>
+    <li>Post para criar</li>
+    <li>Put para atualizar</li>
+    <li>Delete para remover</li>
+</ul>
+
+<img src="./img/padroes_http_corretos.PNG" alt="">
+
+<p>A aplicação pode até ser configurada para consumir a API de uma forma diferente, mas é um outro padrão, não é RESTFUL.</p>
+
+<h3>Status code</h3>
+
+<p>Geralmente status começando com 2 (200, 201,...) é sucesso, 4 (404, 403,...) é erro no cliente e 5 (500, 504,...) é erro no servidor.</p>
+
+<p>Status comuns: 
+    <ul>
+        <li>200 - ok</li>
+        <li>401 - unauthorized</li>
+        <li>403 - forbidden</li>
+        <li>404 - Not found</li>
+        <li>500 - </li>
+        <li>504 - Gateway Timeout</li>
+    </ul>
+</p>
+
+<h2>Mãos na massa</h2>
+
+<p>Pegamos <a href="https://github.com/huguinho-alves/python_aceleracao_everys/blob/main/Aceleracao%20Everis%20-%20Postman.postman_collection.json">esse json</a> (que nomeei como everis.json) e baixamos o <a href="https://www.postman.com/downloads/">Postman</a></p>
+
+<p>Depois de baixado o post e estamos em sua home, clicamos no menu File e importamos o everis.json. Abrirá os métodos cadastrados e clicando em cada um temos detalhes. O detalhe, porém, é que durante o curso agora a API não estava mais acessível.</p>
+
+<p>O postman é usado para testar se a API está funcionando direitinho, sendo executando as requisições, quanto pegar quais os códigos que devem ser passados para consumir a API.</p>
