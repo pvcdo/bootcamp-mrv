@@ -1,0 +1,77 @@
+<h1>Introdução ao C# e .NET</h1>
+
+<h2>Criando seu primeiro projeto em C#</h2>
+
+<h3>O que é .NET?</h3>
+
+<p>É uma framework que permite a comunicação entre várias linguagens de infraestrutura comum, como o Visual Basic, C++,F# e C#.</p>
+
+<h3>C#</h3>
+
+<p>C# é uma linguagem OO fortemente tipada.</p>
+
+<h2>Estrutura</h2>
+
+<h3>Namespaces</h3>
+
+<p>São usados para organizar, separar classes. Para usar classes de outro namespace colocamos o termo using no início do código.</p>
+
+<div style="background-color: grey; font-weight: bold;">
+    <pre>
+
+        using System;
+        namespace CSharp
+        {
+            Console //método do System
+        }
+    </pre>
+    
+    <pre>
+        namespace CSharp
+        {
+            System.Console //método do System
+        }
+    </pre>
+</div>
+
+<p>O namespace System é um namespace nativo do .NET e portando pode ser usada em qualquer projeto. Como vimos, um namespace nativo pode ser acessada das duas formas mostradas acima.</p>
+
+<h3>Classes</h3>
+
+<p>É como se fosse um construtor de objetos, tal qual as classes do javascript. Os atributos de uma classe são chamados de membros.</p>
+
+<div style="background-color: grey; font-weight: bold;">
+    <pre>
+        class NomeClasse{
+            public string Nome { get; set; }
+        }
+    </pre>
+</div>
+
+<p>Os membros são definidos pela sintaxe <b>escopo tipo nome (get; set;)</b>. A professora não explicou porque, mas no dela o escopo é public em todos. Também não explicou nenhum outro parâmetro.</p>
+
+<p>Quando vamos instanciar um objeto de uma classe, nós ao invés de declararmos a variável com o termo <b>var</b> nós colocamos um "tipo explícito" (que recebe qualquer valor que queremos, mas ela escreveu com letra maiúscula).</p>
+
+<p>A sintaxe para instanciamento de uma classe é: <b>~ var || TipoExplicito ~ nome = new Classe();</b></p>
+
+<h3>Interface</h3>
+
+<p>Interface é uma classe base para criar outras classes.</p>
+
+<img src="./interface-exemplo.PNG" alt="">
+
+<h3>Enum</h3>
+
+<p>Um conjunto de constantes nomeadas que começam indexadas em 0 e esses índices vão incrementando de 1 a 1.</p>
+
+<img src="./enum-exemplo.PNG" alt="">
+
+<h2>Debugging</h2>
+
+<p>Podemos colocar a bolinha na barra lateral esquerda ou então selecionar a linha na qual queremos parar e depois apertarmos f9. Ao executar o código ele irá ser interrompido na linha marcada.</p>
+
+<p>Segundo a professora, métodos não static "não rodam".</p>
+
+<p>A partir do breakpoint nós podemos ir apertando f10 para ir executando as linhas uma a uma. Para executar tudo de uma vez damos o f5.</p>
+
+<p>A microsoft tem documentação .net e c#.</p>

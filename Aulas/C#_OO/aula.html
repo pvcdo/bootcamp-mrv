@@ -1,0 +1,95 @@
+<h1>Programando com Orientação a Objeto com C#</h1>
+
+<p>Professor Leonardo Buta - tem um canal no youtube: Leonardo Buta</p>
+
+<h2>Conhecendo a Programação Orientada a Objetos</h2>
+
+<h3>Apresentando a programação orientada a objetos</h3>
+
+<p>É um paradigma de programação, uma técnica, uma maneira de fazer programação. Esse paradigma tenta aproximar o mundo real da programação, pois tenta abstrair o mundo real dentro do código.</p>
+
+<ul>
+    Os pilares são:
+    <li>Abstração</li>
+    <li>Encapsulamento</li>
+    <li>Herança</li>
+    <li>Polimorfismo</li>
+</ul>
+
+<p>Os pilares são independentes e harmônicos, com exceção do polimorfismo que depende de herança.</p>
+
+<p>Os principais conceitos da POO são as classes e objetos. Uma classe é um molde e um objeto é algo criado a partir desse molde.</p>
+
+<h3>Tipos de paradigmas</h3>
+
+<p>Existem vários de paradigmas, dentre os quais destacam-se:</p>
+
+<ul>
+    <li>POO</li>
+    <LI>Estruturada</LI>
+    <li>Imperativa</li>
+    <li>Procedural</li>
+    <li>Orientada a eventos</li>
+    <li>Lógica</li>
+</ul>
+
+<a href="https://docs.microsoft.com/pt-br/dotnet/csharp/fundamentals/tutorials/oop">POO C# by Microsoft.</a>
+
+<h2>Abstração</h2>
+
+<h3>Introdução</h3>
+
+<p>Representar um objeto do mundo real considerando apenas os atributos importantes para o projeto. Por exemplo, uma criança que está em fase escolar tem diversas características, mas para um sistema informático de orientação a objetos da sua escola, o importante é o número da matrícula dela, as suas notas, faltas, nome, sala, série, dentre outros que fazem sentido no contexto da escola.</p>
+
+<h3>Requisitos do projeto</h3>
+
+<p>O professor indicou fazer o download do SDK do .NET no <a href="https://dotnet.microsoft.com/en-us/download">site da Microsoft</a>e também o VSCode. Irei fazer essa instalação, mesmo tendo o visual studio e instalando as "cargas de trabalho" como indicado pela nossa querida colega Giovanna Ramos.</p>
+
+<h3>Prática</h3>
+
+<ol>
+    <li>criar pasta do raiz projeto</li>
+    <li>abrir o cmd nesse diretório</li>
+    <li>
+        comando <b>dotnet new sln --name ExemploPOO</b> 
+        <br>
+        Esse comando cria uma "solution" com o nome ExemploPOO. Essa solution é um agrupamento para o projeto.
+    </li>
+    <LI>criou um novo diretório dentro da pasta do projeto com o nome ExemploPOO</LI>
+    <LI>entrou nesse novo diretório e criou o projeto de fato com o comando <b>dotnet new console</b></LI>
+    <li>
+        depois voltou à pasta raiz do projeto e deu o comando <b>dotnet sln add ExemploPOO/ExemploPOO.csproj</b>
+        <br>
+        Esse comando adiciona na solution o arquivo csproj especificado.
+    </li>
+    <li>abriu a pasta do raiz do projeto no vscode</li>
+    <li>no vscode ele instalou as extensões
+        <ul>
+            <li>c#</li>
+            <li>c# extentions</li>
+            <li>vscode-icons</li>
+        </ul>
+    </li>
+    <li>dentro da pasta ExemploPOO ele criou uma outra chamada Models</li>
+    <li>
+        dentro da pasta Models ele criou uma classe c# de nome Pessoa.
+        <br>
+        A extensão c# extentions então cria o arquivo cs com o nome Pessoa e dentro dele uma série de códigos para uma classe também de nome Pessoa)
+    </li>
+    <li>na primeira linha do recém criado documento ele colocou o comando <b>using System;</b></li>
+    <li>criou dentro da classe Pessoa os atributos Nome e Idade, com os adjetivos public, string e os verbos (get;set;) como parâmetros.</li>
+    <li>
+        criou dentro da classe Pessoa um método Apresentar() com os adjetivos public e void. O método faz Console.WriteLine($"Olá, meu nome é {Nome} e tenho {Idade} anos");
+        <br>
+        O símbolo de cifrão no início do comando indica uma interpolação entre uma string e os atributos da classe.
+    </li>
+    <li>ele apertou F1 e no buscador do vscode que se abriu ele pesquisou omnisharp select project, isso para dar os autocomplete do c#. Ele escolheu o sln entre os dois que apareceram</li>
+    <li>em ExemploPOO/Program.cs ele colocou dentro do método Main o texto Pessoa e deu um <b>ctrl .</b> para importar os métodos do ExemploPOO.Models, depois continuou escrevendo ao final <b>Pessoa p1 = new Pessoa();</b></li>
+    <li>
+        p1.Nome = "Bob";
+        p1.Idade = 20;
+        p1.Apresentar();
+    </li>
+    <li>para executar o programa nós devemos abrir o cmd no nível do csproj do nosso projeto e darmos o comando <b>dotnet run</b></li>
+
+</ol>

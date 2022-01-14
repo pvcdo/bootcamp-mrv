@@ -1,0 +1,15 @@
+D:\Paulo Victor\Estudos\Programação\DIO\DIO\Bootcamps\bootcamp-mrv\C#_OO\ExemploPOO\bin\Debug\net6.0\ExemploPOO.exe
+D:\Paulo Victor\Estudos\Programação\DIO\DIO\Bootcamps\bootcamp-mrv\C#_OO\ExemploPOO\bin\Debug\net6.0\ExemploPOO.deps.json
+D:\Paulo Victor\Estudos\Programação\DIO\DIO\Bootcamps\bootcamp-mrv\C#_OO\ExemploPOO\bin\Debug\net6.0\ExemploPOO.runtimeconfig.json
+D:\Paulo Victor\Estudos\Programação\DIO\DIO\Bootcamps\bootcamp-mrv\C#_OO\ExemploPOO\bin\Debug\net6.0\ExemploPOO.dll
+D:\Paulo Victor\Estudos\Programação\DIO\DIO\Bootcamps\bootcamp-mrv\C#_OO\ExemploPOO\bin\Debug\net6.0\ref\ExemploPOO.dll
+D:\Paulo Victor\Estudos\Programação\DIO\DIO\Bootcamps\bootcamp-mrv\C#_OO\ExemploPOO\bin\Debug\net6.0\ExemploPOO.pdb
+D:\Paulo Victor\Estudos\Programação\DIO\DIO\Bootcamps\bootcamp-mrv\C#_OO\ExemploPOO\obj\Debug\net6.0\ExemploPOO.csproj.AssemblyReference.cache
+D:\Paulo Victor\Estudos\Programação\DIO\DIO\Bootcamps\bootcamp-mrv\C#_OO\ExemploPOO\obj\Debug\net6.0\ExemploPOO.GeneratedMSBuildEditorConfig.editorconfig
+D:\Paulo Victor\Estudos\Programação\DIO\DIO\Bootcamps\bootcamp-mrv\C#_OO\ExemploPOO\obj\Debug\net6.0\ExemploPOO.AssemblyInfoInputs.cache
+D:\Paulo Victor\Estudos\Programação\DIO\DIO\Bootcamps\bootcamp-mrv\C#_OO\ExemploPOO\obj\Debug\net6.0\ExemploPOO.AssemblyInfo.cs
+D:\Paulo Victor\Estudos\Programação\DIO\DIO\Bootcamps\bootcamp-mrv\C#_OO\ExemploPOO\obj\Debug\net6.0\ExemploPOO.csproj.CoreCompileInputs.cache
+D:\Paulo Victor\Estudos\Programação\DIO\DIO\Bootcamps\bootcamp-mrv\C#_OO\ExemploPOO\obj\Debug\net6.0\ExemploPOO.dll
+D:\Paulo Victor\Estudos\Programação\DIO\DIO\Bootcamps\bootcamp-mrv\C#_OO\ExemploPOO\obj\Debug\net6.0\ref\ExemploPOO.dll
+D:\Paulo Victor\Estudos\Programação\DIO\DIO\Bootcamps\bootcamp-mrv\C#_OO\ExemploPOO\obj\Debug\net6.0\ExemploPOO.pdb
+D:\Paulo Victor\Estudos\Programação\DIO\DIO\Bootcamps\bootcamp-mrv\C#_OO\ExemploPOO\obj\Debug\net6.0\ExemploPOO.genruntimeconfig.cache
