@@ -41,55 +41,18 @@
 
 <p>Representar um objeto do mundo real considerando apenas os atributos importantes para o projeto. Por exemplo, uma criança que está em fase escolar tem diversas características, mas para um sistema informático de orientação a objetos da sua escola, o importante é o número da matrícula dela, as suas notas, faltas, nome, sala, série, dentre outros que fazem sentido no contexto da escola.</p>
 
-<h3>Requisitos do projeto</h3>
+<h2>Encapsulamento</h2>
 
-<p>O professor indicou fazer o download do SDK do .NET no <a href="https://dotnet.microsoft.com/en-us/download">site da Microsoft</a>e também o VSCode. Irei fazer essa instalação, mesmo tendo o visual studio e instalando as "cargas de trabalho" como indicado pela nossa querida colega Giovanna Ramos.</p>
+<h3>Introdução</h3>
 
-<h3>Prática</h3>
+<p>Proteger elementos de uma classe e definir os limites de sua alteração. Também serve para ocultar ou expor um comportamento se necessário, deixando a aplicação mais segura contra alterações equivocadas.</p>
 
-<ol>
-    <li>criar pasta do raiz projeto</li>
-    <li>abrir o cmd nesse diretório</li>
-    <li>
-        comando <b>dotnet new sln --name ExemploPOO</b> 
-        <br>
-        Esse comando cria uma "solution" com o nome ExemploPOO. Essa solution é um agrupamento para o projeto.
-    </li>
-    <LI>criou um novo diretório dentro da pasta do projeto com o nome ExemploPOO</LI>
-    <LI>entrou nesse novo diretório e criou o projeto de fato com o comando <b>dotnet new console</b></LI>
-    <li>
-        depois voltou à pasta raiz do projeto e deu o comando <b>dotnet sln add ExemploPOO/ExemploPOO.csproj</b>
-        <br>
-        Esse comando adiciona na solution o arquivo csproj especificado.
-    </li>
-    <li>abriu a pasta do raiz do projeto no vscode</li>
-    <li>no vscode ele instalou as extensões
-        <ul>
-            <li>c#</li>
-            <li>c# extentions</li>
-            <li>vscode-icons</li>
-        </ul>
-    </li>
-    <li>dentro da pasta ExemploPOO ele criou uma outra chamada Models</li>
-    <li>
-        dentro da pasta Models ele criou uma classe c# de nome Pessoa.
-        <br>
-        A extensão c# extentions então cria o arquivo cs com o nome Pessoa e dentro dele uma série de códigos para uma classe também de nome Pessoa)
-    </li>
-    <li>na primeira linha do recém criado documento ele colocou o comando <b>using System;</b></li>
-    <li>criou dentro da classe Pessoa os atributos Nome e Idade, com os adjetivos public, string e os verbos (get;set;) como parâmetros.</li>
-    <li>
-        criou dentro da classe Pessoa um método Apresentar() com os adjetivos public e void. O método faz Console.WriteLine($"Olá, meu nome é {Nome} e tenho {Idade} anos");
-        <br>
-        O símbolo de cifrão no início do comando indica uma interpolação entre uma string e os atributos da classe.
-    </li>
-    <li>ele apertou F1 e no buscador do vscode que se abriu ele pesquisou omnisharp select project, isso para dar os autocomplete do c#. Ele escolheu o sln entre os dois que apareceram</li>
-    <li>em ExemploPOO/Program.cs ele colocou dentro do método Main o texto Pessoa e deu um <b>ctrl .</b> para importar os métodos do ExemploPOO.Models, depois continuou escrevendo ao final <b>Pessoa p1 = new Pessoa();</b></li>
-    <li>
-        p1.Nome = "Bob";
-        p1.Idade = 20;
-        p1.Apresentar();
-    </li>
-    <li>para executar o programa nós devemos abrir o cmd no nível do csproj do nosso projeto e darmos o comando <b>dotnet run</b></li>
+<p>Indica que um atributo ou método só é acessível dentro da classe, sendo que para modificar ou atuar nessa propriedade deve-se passar por um método que seja público.</p>
 
-</ol>
+<p>O encapsulamento está diretamente ligado a modificadores de acesso (public, private, internal, protected, etc...).</p>
+
+<h2>Herança</h2>
+
+<p>Também um dos pilares da POO. Permite reutilizar atributos, métodos e comportamentos de outra classe.</p>
+
+<p>É como se copiássemos os atributos e métodos da classe pai e os colássemos nas classes filhas.</p>

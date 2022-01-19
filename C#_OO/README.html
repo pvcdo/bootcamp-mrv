@@ -1,0 +1,89 @@
+<h2>Requisitos do projeto</h2>
+
+<p>O professor indicou fazer o download do SDK do .NET no <a href="https://dotnet.microsoft.com/en-us/download">site da Microsoft</a>e também o VSCode. Irei fazer essa instalação, mesmo tendo o visual studio e instalando as "cargas de trabalho" como indicado pela nossa querida colega Giovanna Ramos.</p>
+
+<h3>Abstração - Prática</h3>
+
+<ol>
+    <li>criar pasta do raiz projeto</li>
+    <li>abrir o cmd nesse diretório</li>
+    <li>
+        comando <b>dotnet new sln --name ExemploPOO</b> 
+        <br>
+        Esse comando cria uma "solution" com o nome ExemploPOO. Essa solution é um agrupamento para o projeto.
+    </li>
+    <LI>criou um novo diretório dentro da pasta do projeto com o nome ExemploPOO</LI>
+    <LI>entrou nesse novo diretório e criou o projeto de fato com o comando <b>dotnet new console</b></LI>
+    <li>
+        depois voltou à pasta raiz do projeto e deu o comando <b>dotnet sln add ExemploPOO/ExemploPOO.csproj</b>
+        <br>
+        Esse comando adiciona na solution o arquivo csproj especificado.
+    </li>
+    <li>abriu a pasta do raiz do projeto no vscode</li>
+    <li>no vscode ele instalou as extensões
+        <ul>
+            <li>c#</li>
+            <li>c# extentions</li>
+            <li>vscode-icons</li>
+        </ul>
+    </li>
+    <li>dentro da pasta ExemploPOO ele criou uma outra chamada Models</li>
+    <li>
+        dentro da pasta Models ele criou uma classe c# de nome Pessoa.
+        <br>
+        A extensão c# extentions então cria o arquivo cs com o nome Pessoa e dentro dele uma série de códigos para uma classe também de nome Pessoa)
+    </li>
+    <li>na primeira linha do recém criado documento ele colocou o comando <b>using System;</b></li>
+    <li>criou dentro da classe Pessoa os atributos Nome e Idade, com os adjetivos public, string e os verbos (get;set;) como parâmetros.</li>
+    <li>
+        criou dentro da classe Pessoa um método Apresentar() com os adjetivos public e void. O método faz Console.WriteLine($"Olá, meu nome é {Nome} e tenho {Idade} anos");
+        <br>
+        O símbolo de cifrão no início do comando indica uma interpolação entre uma string e os atributos da classe.
+    </li>
+    <li>ele apertou F1 e no buscador do vscode que se abriu ele pesquisou omnisharp select project, isso para dar os autocomplete do c#. Ele escolheu o sln entre os dois que apareceram</li>
+    <li>em ExemploPOO/Program.cs ele colocou dentro do método Main o texto Pessoa e deu um <b>ctrl .</b> para importar os métodos do ExemploPOO.Models, depois continuou escrevendo ao final <b>Pessoa p1 = new Pessoa();</b></li>
+    <li>
+        p1.Nome = "Bob";
+        p1.Idade = 20;
+        p1.Apresentar();
+    </li>
+    <li>para executar o programa nós devemos abrir o cmd no nível do csproj do nosso projeto e darmos o comando <b>dotnet run</b></li>
+
+</ol>
+
+<h3>Encapsulamento - Prática</h3>
+
+<ol>
+    <li>criou a classe Retangulo.cs em ./ExemploPOO/Models</li>
+    <li>dentro dela os atributos private double comprimento e largura</li>
+    <li>criou um método capaz de alterar as propriedades private. Esse método será exposto publicamente 
+        <pre>
+            public void definirMedidas(double comprimento, double largura)
+            {
+                this.comprimento = comprimento;
+                this.largura = largura;
+            }
+        </pre>
+    </li>
+    <li>criou o método obterArea
+        <pre>
+            public double obterArea()
+            {
+                return comprimento * largura;
+            }
+        </pre>
+        <p>O método é double pois ele retorna um double.</p>
+    </li>
+    <li>ele fez alguns tratamentos de if para não permitir que sejam passados números iguais ou menores que 0.</li>
+    <li>o prof fez instancimanto de objetos com essa classe no método Main da classe Program.cs, definindo os comprimentos e obtendo as áreas, tanto para valores válidos quanto inválidos</li>
+    <li>para rodar o código nós damos o comando <b>dotnet run</b> no diretório de Program.cs.</li>
+</ol>
+
+<h3>Herança - Prática</h3>
+
+<ol>
+    <li>em ./ExemploPOO/Models ele criou as classes Professor.cs e Aluno.cs</li>
+    <li>criou a propriedade public int Nota em Aluno e Salario em Professor</li>
+    <li>para herdar algo de alguma classe nós colocamos <b> : ClassePai</b> depois de public class ClasseFilha</li>
+    <li>Para rodar, escrevemos os códigos no método Main da classe Program e damos dotnet run no diretório dessa classe.</li>
+</ol>
