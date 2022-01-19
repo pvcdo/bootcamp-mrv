@@ -56,3 +56,25 @@
 <p>Também um dos pilares da POO. Permite reutilizar atributos, métodos e comportamentos de outra classe.</p>
 
 <p>É como se copiássemos os atributos e métodos da classe pai e os colássemos nas classes filhas.</p>
+
+<h2>Polimorfismo</h2>
+
+<p>Podemos sobrescrever um método herdado por uma filha de uma classe pai, fazendo com que seu comportamento seja mais adequado e específico para aquela filha.</p>
+
+<h3>Em tempo de compilação (overload/early binding)</h3>
+
+<p>Dentro de uma classe podemos criar dois métodos com o mesmo nome, tendo os dois assinaturas diferentes.</p>
+
+<p>Exemplo</p>
+
+<img src="./img/pilar-polimorfismo-compilacao.PNG" alt="">
+
+<h3>Em tempo de execução (oerride/late binding)</h3>
+
+<p>É a sobrescrita de um método de uma classe pai por uma classe filha. Essa sobrescrita acontece dentro do contexto da filha.</p>
+
+<p>Exemplo</p>
+
+<img src="img/pilar-polimorfismo-execucao.PNG" alt="">
+
+<p>Interessante notar que no exemplo de polimorfismo em tempo de execução acima, temos que colocar o tipo virtual na classe pai e override no método herdado na classe filha, esses dois adjetivos devem estar junto do tipo do método (void, por exemplo).</p>
