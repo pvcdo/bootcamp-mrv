@@ -102,3 +102,80 @@
 <p>Interface é um contrato que pode ser implementado por uma classe. Não pode ser implementada assim como a classe abstrata. A diferença entre classe e interface é que uma classe só pode herdar props de apenas de uma classe, mas pode herdar props de inúmeras interfaces.</p>
 
 <p>Caso um método na interface não tenha uma lógica associada ("uma implementação padrão") esse método deve obrigatoriamente receber uma lógica ("ser implementado") na classe que herda ("implementa") essa interface; caso ele tenha uma implementação padrão eu posso optar em sobrescrever (implementar) ou não este método na classe que herda a interface. Esse tipo de comportamento se deu a partir do C# 8, antes não era possível fazer implementação padrão de métodos em interfaces.</p>
+
+<h2>Manipular arquivos</h2>
+
+<p>A seguir classes estáticas para trabalho com arquivos, pastas e rotas:</p>
+
+<ul>
+    <li>Directory</li>
+    <li>File</li>
+    <li>Path</li>
+</ul>
+
+<p>O acesso a essas classes é possível a partir do uso do namespace System.IO. Classes estáticas não são instanciáveis, ou seja, nós as usamos diretamente.</p>
+
+<h3>Directory</h3>
+
+<ul>
+    <li>
+        Directory.GetDirectories()
+        <ul>
+            <li>
+                <p>Directory.GetDirectories(diretorio_raiz) - retorna um array com os subdiretórios presentes no diretorio_raiz.</p>
+            </li>
+            <li>
+                <p>Directory.GetDirectories(diretorio_raiz,"*",SearchOption.AllDirectories) - retorna um array com todos os subdiretórios abaixo do diretorio_raiz.</p>
+            </li>
+        </ul>
+    </li>
+    <li>
+        Directory.GetFiles()
+        <ul>
+            <li>
+                <p>Directory.GetFiles(diretorio_raiz) - retorna um array com os arquivos que estão no diretorio_raiz</p>
+            </li>
+            <li>
+                <p>Directory.GetFiles(diretorio_raiz,"*",SearchOption.AllDirectories) - retorna um array com todos os arquivos que estão abaixo do diretorio_raiz</p>
+            </li>
+            <li>
+                <p>Directory.GetFiles(diretorio_raiz,"*.txt",SearchOption.AllDirectories) - retorna um array com todos os arquivos txt que estão abaixo do diretorio_raiz</p>
+            </li>
+        </ul>
+    </li>
+    <li>
+        Directory.CreateDirectory()
+        <ul>
+            <li>
+                <p>Directory.CreateDirectory(caminho) - cria um diretório baseado no caminho passado e retorna informações sobre o diretório criado.</p>
+                <ul>
+                    <li>
+                        <p>Uma das informações retornadas é o FullName que passa o path completo do diretório criado.</p>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </li>
+    <li>
+        Directory.Delete()
+        <ul>
+            <li>
+                <p>Directory.Delete(caminho) - exclusão de pasta sem arquivos e subpastas</p>
+            </li>
+            <li>
+                <p>Directory.Delete(caminho, bool apagarFilhos) - caso o diretório tenha arquivos ou subpastas, temos que passar o segundo pâmetro como true para apagar tudo.</p>
+                <p>Essa exclusão é definitiva, ou seja, o arquivo deletado não vai para a lixeira, ele é excluído do HD (da memória).</p>
+            </li>
+        </ul>
+    </li>
+</ul>
+
+<p style="color:red">Nos métodos listados acima, o asterisco indica que a busca do texto vai admitir qualquer sequência de caracteres.</p>
+
+<h3>Path</h3>
+
+<ul>
+    <li>
+        Path.Combine(caminho, pasta, subpasta, subsubpasta, ...) - cria uma string do caminho para ser utilizada.
+    </li>
+</ul>
