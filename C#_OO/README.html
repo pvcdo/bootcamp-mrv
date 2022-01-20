@@ -2,8 +2,6 @@
 
 <p>O professor indicou fazer o download do SDK do .NET no <a href="https://dotnet.microsoft.com/en-us/download">site da Microsoft</a>e também o VSCode. Irei fazer essa instalação, mesmo tendo o visual studio e instalando as "cargas de trabalho" como indicado pela nossa querida colega Giovanna Ramos.</p>
 
-<h3>Abstração - Prática</h3>
-
 <ol>
     <li>criar pasta do raiz projeto</li>
     <li>abrir o cmd nesse diretório</li>
@@ -23,11 +21,15 @@
     <li>no vscode ele instalou as extensões
         <ul>
             <li>c#</li>
-            <li>c# extentions</li>
+            <li>c# extensions</li>
             <li>vscode-icons</li>
         </ul>
     </li>
     <li>dentro da pasta ExemploPOO ele criou uma outra chamada Models</li>
+</ol>
+
+<h3>Abstração - Prática</h3>
+<ol>
     <li>
         dentro da pasta Models ele criou uma classe c# de nome Pessoa.
         <br>
@@ -48,7 +50,6 @@
         p1.Apresentar();
     </li>
     <li>para executar o programa nós devemos abrir o cmd no nível do csproj do nosso projeto e darmos o comando <b>dotnet run</b></li>
-
 </ol>
 
 <h3>Encapsulamento - Prática</h3>
@@ -117,4 +118,20 @@
 
         <p>A classe "Corrente" foi criada na pasta Models.</p>
     </li>
+</ol>
+
+<h3>Classes seladas</h3>
+
+<p>Feitos testes com criação da classe Diretor em Models, que herda props de Professor. Depois marcamos a classe Professor como selada de acordo com as intruções <a href="../Aulas/C%23_OO/aula.html#cs_oo-classes-seladas">da aula</a> e podemos notar o erro que aparece na classe Diretor, uma vez que este herda daquele, que agora é selado. Fez alguns testes também com o método apresentar, colocando e tirando o adjetivo sealed.</p>
+
+<h3>Classe Object</h3>
+
+<p>Podemos criar uma classe vazia e em outro lugar fazer uma instaância dela. Podemos observar os métodos que nos são apresentados, indicando que mesmo uma classe vazia já tem métodos implícitos que são herdados da classe mão Object.</p>
+
+<h3>Interfaces</h3>
+
+<ol>
+    <li>ele criou a pasta ./ExemploPOO/Interfaces</li>
+    <li>criou nesta pasta uma nova interface chamada ICalculadora.cs</li>
+    <li>criou os métodos somar, subtrair, multiplicar e dividir com retorno int</li>
 </ol>
