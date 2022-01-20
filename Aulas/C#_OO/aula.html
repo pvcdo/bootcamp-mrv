@@ -82,3 +82,23 @@
 <h2>Classes abstratas</h2>
 
 <p>É um conceito fortemente ligado a heranças. Elas tem apenas a função de ser pai, não podemos instanciar um objeto com base nela, mas apenas criar outras classes herdando suas propriedades. Os métodos também podem ser classificados como abstratos, sendo que métodos abstratos devem ser obrigatoriamente sobrescritos por meio do polimorfismo em tempo de execução.</p>
+
+<h2 id="cs_oo-classes-seladas">Classes seladas</h2>
+
+<p>Ao contrário da abstrata ela não pode ter classes filhas. Métodos e atributos também podem ser selados. No caso de métodos não se pode fazer polimorfismo daqueles que são selados. Nenhuma classe pode herdar propriedades de uma classe selada.</p>
+
+<p>Para marcar uma classe, método ou atributo como selada temos que passar o adjetivo &lt;&lt;sealed&gt;&gt;. <span style="color: red;">Lembrando que os adjetivos são passados antes do nome da classe ou propriedade.</span></p>
+
+<p>Classes seladas podem herdar, não podem passar herança.</p>
+
+<h2>Classe object</h2>
+
+<p>A classe System.Object é a mãe de todas as classes .NET. Todas as classes derivam direta ou indiretamente dessa classe Object. Ela tem por objetivo prover serviços de baixo nível para as suas filhas.</p>
+
+<p>É possível sobrescrever alguns métodos da classe System.Object</p>
+
+<h2>Interfaces</h2>
+
+<p>Interface é um contrato que pode ser implementado por uma classe. Não pode ser implementada assim como a classe abstrata. A diferença entre classe e interface é que uma classe só pode herdar props de apenas de uma classe, mas pode herdar props de inúmeras interfaces.</p>
+
+<p>Caso um método na interface não tenha uma lógica associada ("uma implementação padrão") esse método deve obrigatoriamente receber uma lógica ("ser implementado") na classe que herda ("implementa") essa interface; caso ele tenha uma implementação padrão eu posso optar em sobrescrever (implementar) ou não este método na classe que herda a interface. Esse tipo de comportamento se deu a partir do C# 8, antes não era possível fazer implementação padrão de métodos em interfaces.</p>
