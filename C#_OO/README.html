@@ -114,6 +114,8 @@
 
         <p>Para definir que uma classe ou método é abstrato nós utilizamos o adjetivo &lt;&lt;abstract&gt;&gt; depois do modificador de acesso.</p>
 
+        <p>Métodos abstratos devem estar contidos em classes abstratas. Para implementar o metodo abstato na classe filha, temos que declarar o verbo override neste método e a assinatura deve ser a mesma.</p>
+
         <p>Os métodos abstratos não têm a estrutura de chaves depois de sua nomeação, uma vez que sua lógica deve ser obrigatoriamente criada na sua chamada na classe filha.</p>
 
         <p>A classe "Corrente" foi criada na pasta Models.</p>
@@ -122,7 +124,7 @@
 
 <h3>Classes seladas</h3>
 
-<p>Feitos testes com criação da classe Diretor em Models, que herda props de Professor. Depois marcamos a classe Professor como selada de acordo com as intruções <a href="../Aulas/C%23_OO/aula.html#cs_oo-classes-seladas">da aula</a> e podemos notar o erro que aparece na classe Diretor, uma vez que este herda daquele, que agora é selado. Fez alguns testes também com o método apresentar, colocando e tirando o adjetivo sealed.</p>
+<p>Feitos testes com criação da classe Diretor em Models, que herda props de Professor. Depois marcamos a classe Professor como selada de acordo com as intruções <a href="../Aulas/C#_OO/aula.html">da aula</a> e podemos notar o erro que aparece na classe Diretor, uma vez que este herda daquele, que agora é selado. Fez alguns testes também com o método apresentar, colocando e tirando o adjetivo sealed.</p>
 
 <h3>Classe Object</h3>
 
@@ -134,4 +136,5 @@
     <li>ele criou a pasta ./ExemploPOO/Interfaces</li>
     <li>criou nesta pasta uma nova interface chamada ICalculadora.cs</li>
     <li>criou os métodos somar, subtrair, multiplicar e dividir com retorno int</li>
+    <li>Implementou essa interface na nossa já criada classe Calculadora e nessa classe deu o using ExemploPOO.Interface para fazer com que o .net ache essa interface</li>
 </ol>

@@ -1,4 +1,5 @@
 ﻿using System;
+using ExemploPOO.Interfaces;
 using ExemploPOO.Models;
 
 namespace ExemploPOO
@@ -7,11 +8,8 @@ namespace ExemploPOO
     {
         static void Main(String[] args)
         {
-            Pessoa p1 = new Pessoa();
-
-            p1.Nome = "Paulo";
-            p1.Idade = 29;
-            p1.Apresentar();
+            ICalculadora calc = new Calculadora();
+            System.Console.WriteLine(calc.Dividir(5,2));
         }
     }
 }
