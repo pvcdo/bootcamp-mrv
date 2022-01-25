@@ -172,6 +172,69 @@
 
 <p style="color:red">Nos métodos listados acima, o asterisco indica que a busca do texto vai admitir qualquer sequência de caracteres.</p>
 
+<h3>File</h3>
+
+<ul>
+    <li>
+        File.WriteAllText(caminho, conteudo)
+    </li>
+    <li>
+        File.CreateText(caminho) - retorna um objeto StreamWrite para que eu vá escrevendo aos poucos um documento.
+    </li>
+    <li>
+        <p>File.AppendAllText(caminho, conteudo) - abre um arquivo, adiciona o conteúdo (string) passado e fecha o arquivo. Cria um novo arquivo caso o que estamos referenciando ainda não exista.</p>
+    </li>
+    <li>
+            <pre>
+                public void funcao(string caminho, List&lt;string&gt; conteudo)
+                {
+                    using(var stream = File.AppendText(caminho))
+                    {
+                        foreach(var linha in conteudo)
+                        {
+                            stream.WriteLine(linha);
+                        }
+                    }
+                }
+            </pre>
+        <p>Tal qual o CreateText, o AppendText usa gera um objeto StreamWriter o qual irá operar a escrita de anexos ao documento já existente.</p>
+    </li>
+    <li>
+        Leitura de um arquivo sem stream
+        <p>File.ReadAllLines(caminho) - retorna um array de strings, sendo cada item o array uma linha do arquivo.</p>
+    </li>
+    <li>
+        Leitura de arquivo com stream
+        <pre>
+            public void funcao(string caminho)
+            {
+                // var linha = string.Empty; //não sei por que usar essa variável
+                using(var stream = File.OpenText(caminho))
+                {
+                    while((linha = stream.ReadLine()) != null) 
+                    //while(stream.ReadLine() != null) //acredito dar o mesmo resultado que o com o while acima
+                    {
+                        System.Console.WriteLine(linha);
+                    }
+                }
+            }
+        </pre>
+        <p>O OpenText gera um StreamReader para que possamos ir lendo cada linha de forma pausada, não a leitura inteira do documento de uma vez.</p>
+    </li>
+    <li>
+        <p>Movendo um arquivo</p>
+        File.Move(caminho_velho, caminho_novo) - podemos no caminho novo também escolher um novo nome para o arquivo. Inicilmente não é permitido que no caminho novo tenha um arquivo de mesmo nome, mas podemos passar um terceiro parâmetro para o método, permitindo que haja sobrescrita no novo caminho.
+    </li>
+    <li>
+        <p>Copiando um arquivo</p>
+        <p>File.Copy(caminho_velho, caminho_novo) - podemos no caminho novo também escolher um novo nome para o arquivo. Inicilmente não é permitido que no caminho novo tenha um arquivo de mesmo nome, mas podemos passar um terceiro parâmetro para o método, permitindo que haja sobrescrita no novo caminho.</p>
+    </li>
+    <li>
+        <p>Deletando um arquivo</p>
+        <p>File.Delete(caminho) - esse método é irreversível, ele é apagado da memória.</p>
+    </li>
+</ul>
+
 <h3>Path</h3>
 
 <ul>
