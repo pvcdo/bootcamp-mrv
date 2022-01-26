@@ -1,5 +1,7 @@
 <h1>Construtores, propriedades, delegates e eventos em .NET</h1>
 
+<a href="https://github.com/leonardo-buta/curso-tipos-de-construtores-dio/">Leonardo Buta</a>
+
 <H2>Construtores</H2>
 
 <p>É um método especial que tem o objetivo de definir valores padrão para a classe no momento do seu instanciamento. Por padrão, toda classe em c# tem um construtor, caso o usuário não o utilize, o construtor será vazio (mas existirá).</p>
@@ -8,4 +10,28 @@
 
 <p>Uma classe pode ter diversos construtores, sendo que se forem homônimos devem ter parâmetros diferentes. Isso se dá pela característica do c# permitir uma sobrecarga de métodos.</p>
 
+<h3>Construtor padrão</h3>
+
 <p>Ao passarmos um construtor para um classe, os objetos que a instanciarem obrigatoriamente devem utilizar esse construtor. Se não passarmos nenhum construtor será utilizado o construtor padrão, definido pela própria linguagem e que é vazio.</p>
+
+<h3>Construtor privado</h3>
+
+<p>Um tipo de construtor que não impossibilita de fazer uma instancia de um objeto desta classe pelo lado de fora, ou seja, só podemos instanciar essa classe a partir de métodos internos da própria classe. Para definir um construtor privado, nós colocamos o modificador de acesso private para definir o construtor. Muito utilizado no padrão de projetos singleton.</p>
+
+<p>No <a href="../../C#_Construtores/ExemploConstrutores/Models/Log.cs">exemplo</a> o professor abstraiu um sistema de log, onde cada log emitido utiliza a classe de log, mas utiliza a mesma instancia do objeto. Isso evita que cada log crie uma nova instancia da Classe e assim sobrecarregue a memória desnecessáriamente. Nesse padrão de projeto, os logs são para um mesmo usuário.</p>
+
+<p>Para usar o método de uma classe sem instanciá-la nós devemos escrever <b>Classe.Metodo()</b>.</p>
+
+<h3>Construtor da herança</h3>
+
+<p>Para herdar uma classe que possui construtor definido nós temos que definir na classe filha um construtor igual à classe mãe e também definir que serão passados os parâmetros construtores para a classe mãe, assim como no exemplo. Podemos criar parâmetros a mais para a classe filha.</p>
+
+<h2>Getters e Setters</h2>
+
+<p>O exemplo dessa aula é o <a href="../../C#_Construtores/ExemploConstrutores/Models/Data.cs"></a></p>
+
+<p>Os métodos getters e setters servem para incluir validações e controle à atribuição de valores às variáveis do objeto ou mesmo controlando o seu retorno.</p>
+
+<h3>Propriedades</h3>
+
+<p>São a unificação dos getters e setters. Se no programa nós igualarmos a propriedade a algum valor, nós estaremos chamando o set, caso contrário nós estaremos chamando o get.</p>

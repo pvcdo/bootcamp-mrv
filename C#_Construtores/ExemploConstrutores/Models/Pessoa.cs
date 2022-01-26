@@ -4,11 +4,6 @@ namespace ExemploConstrutores.Models
     {
         private string Nome;
         private string Sobrenome;
-        public Pessoa()
-        {
-            Nome = string.Empty;
-            Sobrenome = string.Empty;
-        }
         public Pessoa(string nome, string sobrenome)
         {
             this.Nome = nome;
