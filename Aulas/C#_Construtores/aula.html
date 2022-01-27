@@ -1,6 +1,18 @@
 <h1>Construtores, propriedades, delegates e eventos em .NET</h1>
 
-<a href="https://github.com/leonardo-buta/curso-tipos-de-construtores-dio/">Leonardo Buta</a>
+<p>Professor Leonardo Buta</p>
+
+<ul>
+    <li><a href="https://www.linkedin.com/in/leonardo-buta/">Linkedin</a></li>
+    <li><a href="https://github.com/leonardo-buta">github</a></li>
+</ul>
+
+<p>As aulas estão em:</p>
+<ul>
+    <li><a href="https://github.com/leonardo-buta/curso-tipos-de-construtores-dio/">Leonardo Buta</a></li>
+</ul>
+
+<p>Em <a href="../../C#_Construtores/ExemploConstrutores/Program.cs">Program.cs</a> temos as aplicações de exemplos e comentários sobre os assuntos abordados nas aulas.</p>
 
 <H2>Construtores</H2>
 
@@ -16,11 +28,11 @@
 
 <h3>Construtor privado</h3>
 
-<p>Um tipo de construtor que não impossibilita de fazer uma instancia de um objeto desta classe pelo lado de fora, ou seja, só podemos instanciar essa classe a partir de métodos internos da própria classe. Para definir um construtor privado, nós colocamos o modificador de acesso private para definir o construtor. Muito utilizado no padrão de projetos singleton.</p>
+<p>Um tipo de construtor que impossibilita de fazer uma instancia de um objeto desta classe pelo lado de fora, ou seja, só podemos instanciar essa classe a partir de métodos internos da própria classe. Para definir um construtor privado, nós colocamos o modificador de acesso private para definir o construtor. Muito utilizado no padrão de projetos singleton.</p>
+
+<p>Para instanciar um objeto com construtor privado nós temos que colocar um método na classe que faça essa instância internamente na classe. Para usar o método de uma classe sem instanciá-la nós devemos escrever <b>Classe.Metodo()</b>.</p>
 
 <p>No <a href="../../C#_Construtores/ExemploConstrutores/Models/Log.cs">exemplo</a> o professor abstraiu um sistema de log, onde cada log emitido utiliza a classe de log, mas utiliza a mesma instancia do objeto. Isso evita que cada log crie uma nova instancia da Classe e assim sobrecarregue a memória desnecessáriamente. Nesse padrão de projeto, os logs são para um mesmo usuário.</p>
-
-<p>Para usar o método de uma classe sem instanciá-la nós devemos escrever <b>Classe.Metodo()</b>.</p>
 
 <h3>Construtor da herança</h3>
 
@@ -35,3 +47,43 @@
 <h3>Propriedades</h3>
 
 <p>São a unificação dos getters e setters. Se no programa nós igualarmos a propriedade a algum valor, nós estaremos chamando o set, caso contrário nós estaremos chamando o get.</p>
+
+<h2>Modificadores</h2>
+
+<h3>readonly</h3>
+
+<p>É um moficador de acesso que indica que um atributo só pode ser modificado a partir do construtor ou em sua inicialização. Ex:</p>
+
+<img src="img/ex-readonly.PNG" alt="">
+
+<p>Pode-se perceber pelo exemplo que o this.nome do método AlterarNome() está assinalado como erro, uma vez que está tentando fazer a altação do atributo "nome" que foi definido como somente leitura e só pode ser definido pelo construtor ou diretamente na sua declaração.</p>
+
+<h3>Constante (const)</h3>
+
+<p>É igual à constantes no javascript, não se pode fazer alterações desse valor depois de definido. Ex:</p>
+
+<img src="img/ex-const.PNG" alt="">
+
+<p>É obrigatória a atribuição de um valor na declaração de uma constante.</p>
+
+<h2>Delegate</h2>
+
+<p>Os exemplos de delegate estão em <a href="../../C#_Construtores/ExemploConstrutores/Models/Calculadora.cs">Classe Calculadora</a> e <a href="../../C#_Construtores/ExemploConstrutores/Program.cs">Program.cs</a></p>
+
+<p>É uma maneira de passar um método como referência, podendo ser usado como callback, aceitando qualquer método que contenha a mesma assinatura do delegate. Essa passagem do método é feita no Main do Program.cs</p>
+
+<h3>Multi Cast</h3>
+
+<p>É uma extensão do delegate, onde podemos chamar vários métodos em sequencia em uma mesma chamada do delegate.</p>
+
+<h2>Eventos</h2>
+
+<p>É um mecanismo de comunicação entre objetos, um evento ocorre quando outra ação ocorre. Eventos trabalham com delegates para executar suas funções. A palavra chave do evento é "event".</p>
+
+<p>A sintaxe é 
+    <pre>&lt;modificador de acesso&gt; &lt;tipo(de acordo com os métodos associados)&gt; &lt;event&gt; &lt; nome do delegate associado &gt; &lt; nome do evento &gt;</pre>
+</p>
+
+<h3>Conclusão</h3>
+
+<p>É proposto pelo professor o aprofundamento nos conhecimentos a partir do estudo dos tópidcos de construtores, delegates e eventos, modificadores e propriedades. As referências de estudo são sobremaneira o site <a href="https://www.c-sharpcorner.com/UploadFile/84c85b/delegates-and-events-C-Sharp-net/">c-sharpcorner</a> e o <a href="https://www.tutlane.com/tutorial/csharp/csharp-events">tutlane</a></p>
