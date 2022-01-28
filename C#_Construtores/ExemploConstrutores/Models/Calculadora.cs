@@ -6,7 +6,7 @@ namespace ExemploConstrutores.Models
         public delegate void DelegateCalculadora();
 
         // Evento
-        public static event DelegateCalculadora EventoCalculadora;
+        public static event DelegateCalculadora? EventoCalculadora;
 
         public static void Somar(int x, int y)
         {

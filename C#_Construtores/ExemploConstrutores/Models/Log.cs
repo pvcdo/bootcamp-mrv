@@ -2,8 +2,8 @@ namespace ExemploConstrutores.Models
 {
     public class Log
     {
-        private static Log _log;
-        public string PropriedadeLog { get; set; }
+        private static Log? _log;
+        public string? PropriedadeLog { get; set; }
 
         private Log()
         {
