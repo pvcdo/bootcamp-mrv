@@ -1,0 +1,75 @@
+<h1>Introdução a microsserviços com .NET</h1>
+
+<p>Essa aula é o seriamento de uma live do Professor <a href="https://www.linkedin.com/in/andre-coura-costa">André Coura</a>, Arquiteto de soluções na Localiza.</p>
+
+<h2>Conceitos iniciais sobre monolitos e microsserviços</h2>
+
+<h3>Monolitos</h3>
+
+<p>Monolitos são serviços grandes, difíceis de implementar. Monolito é uma estrutura geológica como uma montanha, constituído por uma única e maceça pedra ou rocha.</p> 
+
+<p>No início precisamos entregar e o monolito atende essa função, tem uma infraestrutura simples e o debug é fácil.</p>
+
+<p>Seus problemas são merge-conflicts, conectividade (tcp limitado), problemas de concorrência (maior ocupação de memória), bugs e defeitos colaterais (ponto único de falha), build/deploy demorados, baixa escalabilidade, tecnologia única (baixa flexibilidade), demora de "aculturamento"</p>
+
+<h3>Microsserviços</h3>
+
+<p>Microsserviços vieram para facilitar e agilizar</p>
+
+<h2>Escalabilidade vertical x horizontal</h2>
+
+<p>Escalabilidade vertical é colocar hardware mais potente, mais memória e melhores cpu. Porém, pode ficar caro.</p>
+
+<p>A escalabilidade horizontal é aumentar o número de servidores onde é necessário o posicionamento de um load balancer, para direcionar as requisições para um ou outro servidor, de acordo com a porcentagem estabelecida pelo time e também junto ao load balancer colocar um firewall para aumentar a segurança da aplicação.</p>
+
+<p>Essas escalabilidades mais físicas continuam gerando os problemas decorrentes dos monolitos e até os intensificando, já que eles serão distribuídos em diversos servidores.</p>
+
+<p>Martin Fowler é um arquiteto que projetou o conceito de escalabilidade horizontal com microsserviços (escalabilidade por demanda). A ideia é que ao inves de pegar toda a estrutura da aplicação e replicá-la em vários servidores nós podemos dedicar servidores a conjuntos de funcionalidades específicas da aplicação. Assim, nós podemos escalar de forma diferenciada servidores com serviços mais utilizados de outros com menos.</p>
+
+<h2>Visão geral sobre o Manifesto Ágil e ciclos de desenvolvimento</h2>
+
+<p>Em 2001 a XP (extrem program) estava reunida para desenvolver os sistemas. Os microsserviços são uma forma de desenvolvimento ágil. O professor indica a leitura do livro Desenvolvimento Ágil Limpo (de Bob Martin).</p>
+
+<p>Os ciclos de desenvolvimento devem ser pequenos, à fim de acelerar o aprendizado, prática e feedback dos sistemas e desenvolver de forma ágil.</p>
+
+<p>DevOps é desenvolver, entregar, codificar, planejar, monitorar, operar e repetir tudo de forma rápida. Acompanhando se o ciclo está gerando valor suficiente para o negócio.</p>
+
+<img src="img/devops.PNG" alt="Representação do ciclo de DevOps">
+
+<h2>Ecossistemas de microsserviços</h2>
+
+<img src="img/eco-ms.PNG" alt="Representação do ecossistema de um microsserviço de um e-commerce">
+
+<p>São usadas diferenciação de contextos, cada serviço tem sua estrutura de códigos e banco de dados.</p>
+
+<h2>API's públicas e suas interações</h2>
+
+<p>O nosso sistema não depende de uma linguagem específica.</p>
+
+<p>O microsserviço encapsula estado (dados) e comportamento (regras de negócio). Microsserviços possuem deploys independentes, ou seja ? (o professor não explicou). Os microsserviços devem ter tratamentos isolados de falhas.</p>
+
+<h2>Dividir um monolito em microsserviços</h2>
+
+<p>Uma das abordagens é o DDD (domain drive design). Bounded Context é uma arquitetura que fornece às equipes um conhecimento mais claro do que está sendo desenvolvido. As dependências entre os microsserviços devem ser bem conversadas depois observado no bounded context</p>
+
+<img src="img/bounded-context.PNG" alt="">
+
+<img src="img/maintaining-model-integraty.PNG" alt="">
+
+<h2>Dúvidas da live</h2>
+
+<h3>Qual linguagem mais flexível para microsserviços</h3>
+
+<p>Todas modernas são boas, principalmente as oo, mas a escolha do uso de cada uma depende da necessidade do seu microsserviço. Melhor linguagem que tenha "tratamento de threads nativo". DotNet e Python ele recomendou bastante. Java ele falou que está caindo um pouco por questão da falta de flexibilidade.</p>
+
+<h3>Tarefas síncronas</h3>
+
+<p>Tarefas síncronas tem que ser trabalhadas de uma forma independente.</p>
+
+<h3>Perda de memória com microsserviços</h3>
+
+<p>Há perda de memória, é bom usar cache.</p>
+
+<h3>Vantagens frente complexidade</h3>
+
+<p>Resiliencia, escalabilidade, desempenho, maio velocidade de feedback sobre valor</p>

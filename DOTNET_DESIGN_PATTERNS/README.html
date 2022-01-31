@@ -1,0 +1,49 @@
+<h1>Hands on</h1>
+
+<h2>Criando o projeto e ambiente com Swagger</h2>
+
+<ol>
+    <li>
+        <p>O professor criou no Visual Studio um novo projeto ASP.NET Web API e utiliou o .NET Core 3.1, uma vez que esse já vem com um template básico que ele acha interessante.</p>
+
+        <p>Ao ser criado são gerados várias pastas e documentos, entre eles o Startup.cs com algumas configurações iniciais. Swagger é uma definição que permite mostrar nossa aplicação na web.</p>
+    </li>
+    <li>clicar com o direito em Dependencies e deopis em Manage...</li>
+    <li>Em browser procurar swagger</li>
+    <li>Na lista que aparece escolhemos o Swashbuckle.AspNetCore e o instalamos</li>
+    <li>clicamos com direito no botão de navegação que representa o projeto e vamos em propriedades</li>
+    <li>na janela que se abre selecionamos o menu build e marcamos nela a opção de documentação xml</li>
+    <li>em Startup.cs, abaixo de services.AddControllers() nós colocamos o seguinte código
+        <pre>
+            services.AddSwaggerGen(c =>
+            {
+                c.SwaggerDoc("v1", new OpenApiInfo
+                {
+                    Title = "Localiza.Frotas",
+                    Description = "API - Frotas",
+                    Version = "v1"
+                });
+
+                var apiPath = Path.Combine(AppContext.BaseDirectory, "Localiza.Frotas.xml");
+                c.IncludeXmlComments(apiPath);
+            });
+        </pre>
+    </li>
+    <li>abaixo de if(env.IsDevelopment()){...} colocamos o seguinte código
+        <pre>
+            app.UseSwagger();
+            app.UseSwaggerUI(c =>
+            {
+                c.SwaggerEndpoint("/swagger/v1/swagger.json", "API Localiza.Frotas");
+            });
+        </pre>
+    </li>
+    <li>o professor acessou uma rota que só ele sabe de onde saiu e abriu uma visualização da api que é criada como exemplo do template</li>
+    <li>o professor deletou o controller "WeatherForecastController.cs" que veio no template e o outro documento dessa api</li>
+    <li>ele clicou em Solution no menu de navegação e adicionou um novo projeto a partir de uma template Class Library colocando como nome Localiza.Frotas.Domain e usou o framework .NETcore 3.1</li>
+    <li>Ele deletou a classe que foi criada nesse projeto, deixando apenas a pasta de dependências</li>
+    <li>criou mais um class Library para o projeto, e o denominou de Localiza.Frotas.Infra e também excluiu a classe</li>
+    <li>No projeto Localiza.Frotas ele clicou com o direito em controllers e adicionou um novo controller a partir de uma API Controller vazia</li>
+    <li>Nomeou esse controller de "SingletonController.cs"</li>
+    <li>em Localiza.Frotas.Infra ele criou uma pasta chamada "Singleton"</li>
+</ol>
