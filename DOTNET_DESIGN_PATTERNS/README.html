@@ -38,12 +38,51 @@
             });
         </pre>
     </li>
-    <li>o professor acessou uma rota que só ele sabe de onde saiu e abriu uma visualização da api que é criada como exemplo do template</li>
-    <li>o professor deletou o controller "WeatherForecastController.cs" que veio no template e o outro documento dessa api</li>
+    <li>o professor acessou uma rota que só ele sabe de onde saiu e abriu uma visualização da api que é criada como exemplo do template (imagino que ele tenha dado o comando executar)</li>
+    <li>o professor deletou o controller "WeatherForecastController.cs" que veio no template e o outro documento c# dessa api que estava na raiz do projeto</li>
     <li>ele clicou em Solution no menu de navegação e adicionou um novo projeto a partir de uma template Class Library colocando como nome Localiza.Frotas.Domain e usou o framework .NETcore 3.1</li>
     <li>Ele deletou a classe que foi criada nesse projeto, deixando apenas a pasta de dependências</li>
     <li>criou mais um class Library para o projeto, e o denominou de Localiza.Frotas.Infra e também excluiu a classe</li>
     <li>No projeto Localiza.Frotas ele clicou com o direito em controllers e adicionou um novo controller a partir de uma API Controller vazia</li>
     <li>Nomeou esse controller de "SingletonController.cs"</li>
     <li>em Localiza.Frotas.Infra ele criou uma pasta chamada "Singleton"</li>
+    <li>
+        <h4>Seção "Primeiros passos no desenvolvimento na classe Singleton"</h4>
+    </li>
+    <li>na pasta Singleton ele adicionou uma classe chamada Singleton</li>
+    <li>na classe que é criada automaticamente ele colocou o modificador de acesso "public" e "sealed"</li>
+    <li>dentro da classe ele criou
+        <pre>
+            public Guid Id {get;} => Guid.NewGuid();
+        </pre>
+    </li>
+    <li>em SingletonController.cs ele colocou na classe SingletonController o seguinte código
+        <pre>
+            [HttpGet()]
+            public IActionResult Get()
+            {
+                var singleton = new Singleton();
+                return ok(singleton);
+            }
+        </pre>
+        <p>Acima do public clas SingletonController : ControllerBase ele colocou</p>
+        <pre>
+            [Route("api/v1/[Controller]")]
+        </pre>
+    </li>
+    <b style="color: red;">Conteúdo muito denso, ainda preciso estudar mais sobre singleton e containers em C#</b>
 </ol>
+
+<h2>Repository</h2>
+
+<p>No padrão repository são definidas formas de fazer get, post, put e delete de dados e o swagger vai mostrar.</p>
+
+<p>O InMemoryRepository é um exemplo de trabalho com banco de dados, porém em uma lista dentro do sistema. Ou seja é uma simulação de banco de dados.</p>
+
+<p>O Swagger é como se fosse um postman. Nós podemos testar a API que estamos desenvolvendo ao executar o programa.</p>
+
+<p>Para usar um Entity Framework (EF) nós podemos fazer sua instalação InMemory. O Entity Framework é uma ORM, facilita os comandos do SQL Server. O EF permite acessar várias outras bases de dados além do SQL Server.</p>
+
+<h2>Facade</h2>
+
+<p>A pronúncia é "faceide".</p>
