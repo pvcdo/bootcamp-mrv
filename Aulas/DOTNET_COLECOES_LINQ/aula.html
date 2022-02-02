@@ -6,3 +6,44 @@
     <li><a href="https://www.linkedin.com/in/leonardo-buta/">Linkedin</a></li>
     <li><a href="https://github.com/leonardo-buta">github</a></li>
 </ul>
+
+<h2>Arrays</h2>
+
+<p>Array é um conjunto de dados que armazena valores do mesmo tipo, com um tamnho fixo.</p>
+
+<p>Há algumas formas de declarar um array</p>
+
+<ul>
+    <li>
+        int[] array = new int[4];
+        <p>Um array de inteiros que só pode ter 4 elementos</p>
+    </li>
+    <li>
+        int[] array = new int[]{42,75,74,61};
+        <p>Automataticamente o array que não tem tamanho, pode ter seu limite indicado pelo número de valores que foram passados na inicialização</p>
+    </li>
+    <li>
+        string[] nomes = {"Jan", "Fev"};
+    </li>
+    <li>
+        int[,] matriz = new int[4,2];
+        <p>Array com 4 linhas e 2 colunas</p>
+    </li>
+</ul>
+
+<p>Não pode modificar o tamanho do array depois que ele foi declarado.</p>
+
+<h2>Percorrendo um array</h2>
+
+<p>Para percorrer um array nós podemos usar o comando for ou foreach</p>
+
+<h2>Debbugando código</h2>
+
+<p>No vscode é possível fazer o debug de um código, para isso dentro do programa que queremos debugar apertamos a tecla f5, após ter escolhido os breakpoints. Se necessário, temos que fazer algumas alterações no launch.json que abre na pasta .vscode, irmã da pasta raiz do projeto.</p>
+
+<h2>Acessando um array de forma segura</h2>
+
+<p>Ao tentar passar um tipo que não é o certo no array haverá um erro, assim como se tentarmos ler ou modificar um índice que não existe, ou seja, que seja maior que o tamanho do array.</p>
+
+<h2>Array multidimensional ou matriz</h2>
+
