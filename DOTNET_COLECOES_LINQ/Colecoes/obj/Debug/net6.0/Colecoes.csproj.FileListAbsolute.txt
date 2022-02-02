@@ -1,0 +1,15 @@
+D:\Paulo Victor\Estudos\Programação\DIO\DIO\Bootcamps\bootcamp-mrv\DOTNET_COLECOES_LINQ\Colecoes\bin\Debug\net6.0\Colecoes.exe
+D:\Paulo Victor\Estudos\Programação\DIO\DIO\Bootcamps\bootcamp-mrv\DOTNET_COLECOES_LINQ\Colecoes\bin\Debug\net6.0\Colecoes.deps.json
+D:\Paulo Victor\Estudos\Programação\DIO\DIO\Bootcamps\bootcamp-mrv\DOTNET_COLECOES_LINQ\Colecoes\bin\Debug\net6.0\Colecoes.runtimeconfig.json
+D:\Paulo Victor\Estudos\Programação\DIO\DIO\Bootcamps\bootcamp-mrv\DOTNET_COLECOES_LINQ\Colecoes\bin\Debug\net6.0\Colecoes.dll
+D:\Paulo Victor\Estudos\Programação\DIO\DIO\Bootcamps\bootcamp-mrv\DOTNET_COLECOES_LINQ\Colecoes\bin\Debug\net6.0\ref\Colecoes.dll
+D:\Paulo Victor\Estudos\Programação\DIO\DIO\Bootcamps\bootcamp-mrv\DOTNET_COLECOES_LINQ\Colecoes\bin\Debug\net6.0\Colecoes.pdb
+D:\Paulo Victor\Estudos\Programação\DIO\DIO\Bootcamps\bootcamp-mrv\DOTNET_COLECOES_LINQ\Colecoes\obj\Debug\net6.0\Colecoes.csproj.AssemblyReference.cache
+D:\Paulo Victor\Estudos\Programação\DIO\DIO\Bootcamps\bootcamp-mrv\DOTNET_COLECOES_LINQ\Colecoes\obj\Debug\net6.0\Colecoes.GeneratedMSBuildEditorConfig.editorconfig
+D:\Paulo Victor\Estudos\Programação\DIO\DIO\Bootcamps\bootcamp-mrv\DOTNET_COLECOES_LINQ\Colecoes\obj\Debug\net6.0\Colecoes.AssemblyInfoInputs.cache
+D:\Paulo Victor\Estudos\Programação\DIO\DIO\Bootcamps\bootcamp-mrv\DOTNET_COLECOES_LINQ\Colecoes\obj\Debug\net6.0\Colecoes.AssemblyInfo.cs
+D:\Paulo Victor\Estudos\Programação\DIO\DIO\Bootcamps\bootcamp-mrv\DOTNET_COLECOES_LINQ\Colecoes\obj\Debug\net6.0\Colecoes.csproj.CoreCompileInputs.cache
+D:\Paulo Victor\Estudos\Programação\DIO\DIO\Bootcamps\bootcamp-mrv\DOTNET_COLECOES_LINQ\Colecoes\obj\Debug\net6.0\Colecoes.dll
+D:\Paulo Victor\Estudos\Programação\DIO\DIO\Bootcamps\bootcamp-mrv\DOTNET_COLECOES_LINQ\Colecoes\obj\Debug\net6.0\ref\Colecoes.dll
+D:\Paulo Victor\Estudos\Programação\DIO\DIO\Bootcamps\bootcamp-mrv\DOTNET_COLECOES_LINQ\Colecoes\obj\Debug\net6.0\Colecoes.pdb
+D:\Paulo Victor\Estudos\Programação\DIO\DIO\Bootcamps\bootcamp-mrv\DOTNET_COLECOES_LINQ\Colecoes\obj\Debug\net6.0\Colecoes.genruntimeconfig.cache
