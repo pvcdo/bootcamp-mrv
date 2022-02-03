@@ -23,5 +23,105 @@
             <li>vscode-icons</li>
         </ul>
     </li>
-    <li>dentro da pasta Colecoes ele criou uma outra chamada Models</li>
+
+    <li>dentro da pasta Colecoes ele criou uma outra chamada Helper</li>
 </ol>
+
+<h2>Ordenação de arrays</h2>
+
+<ol>
+    <li>Em Helper ele criou as classes OperacoesArray</li>
+    <li>criou um método public void que recebe como parâmetro um array de inteiros. Esse método percorre o array e imprime cada um dos seus itens</li>
+    <li>criou um metodo public void que também recebe um array de inteiros porém agora por referência e escreveu um código bubble sort em c#
+        <p>Receber por referência indica que o array recebido será alterado, ele quem será afetado com as intruções do método, não haverá o retorno de um novo array.</p>
+    </li>
+</ol>
+
+<h2>Classe Array</h2>
+
+<p>É uma classe nativa do System. Facilita para que não precisemos criar algoritmos para executar ações em arrays.</p>
+
+<h3>Ordenar</h3>
+<ul>
+    <li>
+      <pre>Array.Sort(ref array)</pre>
+        <p>Faz a ordenação dos elementos do array. O exemplo foi de um array de inteiros.</p>
+    </li>
+    
+</ul>
+
+<h3>Copiar</h3>
+<ul>
+    <li>
+      <pre>Array.Copy(ref array_a_copiar, ref array_destino, tamanho_copia)</pre>
+        <p>Copia elementos de um array para o outro, sendo que podemos especificar quantas posições iremos copiar, a partir da primeira.</p>
+    </li>
+    
+</ul>
+
+<h3>Elemento existe?</h3>
+
+<ul>
+    <li>Array.Exists(array, elemento_array => elemento_array == valor_procurado)
+        <p>Verifica se o valor de cada elemento (elemento_array) do array passado (array) é igual ao valor_procurado.</p>
+        <p>Também podemos fazer outro tipo de comparação não apenas igualdade. Podemos por exemplo verificar se há algum valor maior que o valor procurado trocando o == por ></p>
+    </li>
+    
+</ul>
+
+<h3>Comparando todos os elementos do array</h3>
+
+<ul>
+    <li>
+        <pre>Array.TrueForAll(array, elemento_array => elemento_array > valor_procurado)</pre>
+        <p>Vê se a comparação estabelecida é verdadeira com todos os elementos do array. No exemplo estamos verificando se todos os valores do array são maiores que o valor procurado, caso algum não seja o retorno é "False"</p>
+    </li>
+</ul>
+
+<h3>Encontrando um elemento no array</h3>
+<ul>
+    <li>
+        <pre>Array.Find(array, el => el == valor_procurado)</pre>
+        <p>Encontra o valor e retorna sua primeira ocorrência.</p>
+        <p>Caso não ache o valor procurado, haverá o retorno do valor padrão do tipo de array (no caso de inteiros o valor padrão é 0)</p>
+    </li>
+    <li>
+        <pre>Array.FindAll</pre>
+        <p>Retorna um array "com a condição que eu busquei"</p>
+    </li>
+    <li>
+        <pre>Array.FindIndex(array, el => el == valor_procurado)</pre>
+        <p>retorna a posição da primeira ocorrência do valor procurado</p>
+    </li>
+    <li>
+        <pre>Array.FindLast</pre>
+        <p>Retorna o valor que eu estou buscando, porém sua última ocorrência</p>
+    </li>
+    <li>
+        <pre>Array.FindLastIndex</pre>
+        <p>Retorna o index da última ocorrência que eu estou procurando</p>
+    </li>
+    <li>
+        <pre>Array.IndexOf(array, valor_procurado)</pre>
+        <p>É a mesma coisa que fazer o Array.FindIndex com a compração de igualdade.</p>
+        <p>Caso não encontre o valor procurado o retorno é de -1.</p>
+    </li>
+</ul>
+
+<h3>Redimensionando o array</h3>
+
+<ul>
+    <li>
+        <pre>Array.Resize(ref array, novoTamanho)</pre>
+        <p>O array retornado tem os mesmos itens iniciais, as posições adicionadas tem itens de valor igual a 0 (no caso de arrays de inteiros).</p>
+    </li>
+</ul>
+
+<h3>Convertendo um array de um para outro tipo</h3>
+
+<ul>
+    <li>
+        <pre>Array.ConvertAll(array, el => el.ToString())</pre>
+        <p>O exemplo é a conversão de um array para o tipo String.</p>
+    </li>
+</ul>

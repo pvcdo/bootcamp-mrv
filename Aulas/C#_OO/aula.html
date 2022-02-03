@@ -113,7 +113,9 @@
     <li>Path</li>
 </ul>
 
-<p>O acesso a essas classes é possível a partir do uso do namespace System.IO. Classes estáticas não são instanciáveis, ou seja, nós as usamos diretamente.</p>
+<p>O acesso a essas classes é possível a partir do uso do namespace System.IO. O uso do namespace significa escrever "using 'nome do namespace'" no início do documento.</p> 
+
+<p>Classes estáticas não são instanciáveis, ou seja, nós as usamos diretamente.</p>
 
 <h3>Directory</h3>
 
@@ -176,6 +178,10 @@
 
 <ul>
     <li>
+        File.WriteAllText(caminho, conteudo) - esse método cria um arquivo com o nome e no diretório especificado no 'caminho' e com o conteúdo especificado em 'conteudo'. Caso o arquivo já exista ele é sobrescrito, portanto, convém colocar um condicional para contornar essa sobrescrição no método.
+    </li>
+    <li>
+        File.CreateText(caminho) - retorna um objeto do tipo StreamWriter que consiste
         File.WriteAllText(caminho, conteudo)
     </li>
     <li>
@@ -239,6 +245,6 @@
 
 <ul>
     <li>
-        Path.Combine(caminho, pasta, subpasta, subsubpasta, ...) - cria uma string do caminho para ser utilizada.
+        Path.Combine(caminho, pasta, subpasta, subsubpasta, [nome do arquivo com extensão] ...) - cria uma string do caminho para ser utilizada.
     </li>
 </ul>
