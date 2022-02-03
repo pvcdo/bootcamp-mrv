@@ -1,4 +1,5 @@
 ﻿using System;
+using Colecoes.Helper;
 
 namespace Colecoes
 {
@@ -6,24 +7,36 @@ namespace Colecoes
     {
         static void Main(string[] args)
         {
+            
 
-            //Array multidimensional
+            //Ordenação de um array na unha
 
-            int[,] matriz = new int[4,2]
-            {
-                {8,8},
-                {10,20},
-                {50,100},
-                {90,200}
-            };
+            // OperacoesArray op = new OperacoesArray();
 
-            for (int linha = 0; linha < matriz.GetLength(0); linha++) //GetLength(0) pega o número de linhas do array multidimensional
-            {
-               for (int coluna = 0; coluna < matriz.GetLength(1); coluna++)//GetLength(1) pega o número de colunas do array multidimensional
-               {
-                   System.Console.WriteLine(matriz[linha,coluna]);
-               }
-            }
+            // int[] numeros = new int[]{5,6,8,9,3};
+            // op.ImprimirArray(numeros);
+
+            // op.OrdenarArray(ref numeros);
+
+            // op.ImprimirArray(numeros);
+
+            // //Array multidimensional
+
+            // int[,] matriz = new int[4,2]
+            // {
+            //     {8,8},
+            //     {10,20},
+            //     {50,100},
+            //     {90,200}
+            // };
+
+            // for (int linha = 0; linha < matriz.GetLength(0); linha++) //GetLength(0) pega o número de linhas do array multidimensional
+            // {
+            //    for (int coluna = 0; coluna < matriz.GetLength(1); coluna++)//GetLength(1) pega o número de colunas do array multidimensional
+            //    {
+            //        System.Console.WriteLine(matriz[linha,coluna]);
+            //    }
+            // }
 
             // int[] arrayInteiros = new int[3]{10,20,30};
             

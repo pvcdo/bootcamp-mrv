@@ -33,17 +33,52 @@
 
 <p>Não pode modificar o tamanho do array depois que ele foi declarado.</p>
 
-<h2>Percorrendo um array</h2>
+<h3>Percorrendo um array</h3>
 
 <p>Para percorrer um array nós podemos usar o comando for ou foreach</p>
 
-<h2>Debbugando código</h2>
+<h3>Debbugando código</h3>
 
 <p>No vscode é possível fazer o debug de um código, para isso dentro do programa que queremos debugar apertamos a tecla f5, após ter escolhido os breakpoints. Se necessário, temos que fazer algumas alterações no launch.json que abre na pasta .vscode, irmã da pasta raiz do projeto.</p>
 
-<h2>Acessando um array de forma segura</h2>
+<h3>Acessando um array de forma segura</h3>
 
 <p>Ao tentar passar um tipo que não é o certo no array haverá um erro, assim como se tentarmos ler ou modificar um índice que não existe, ou seja, que seja maior que o tamanho do array.</p>
 
-<h2>Array multidimensional ou matriz</h2>
+<h3>Array multidimensional ou matriz</h3>
+
+<p>Para percorrer um array muldidimensional nós temos que passar um for dentro do outro. O primeiro percorre as linhas e o segundo as colunas. Temos que executar o método GetLength(a) para determinar o alcance do for, sendo a = 0 para linha e a = 1 para colunas.</p>
+
+<h3>Ordenando arrays</h3>
+
+<p>Existem diversos algoritmos de ordenação, como podemos ver <a href="https://en.wikipedia.org/wiki/Sorting_algorithm">neste artigo</a> da wikipédia, sendo que cada um tem sua complexidade e melhor situação de uso.</p>
+
+<p>O Bubble sort é usado para pequenos arrays. É um algoritimo de comparação. Ele vai fazendo trocas entre os pares imediatos de itens até estabelecer a última posição não ordenada.</p>
+
+<p>O site <a href="https://visualgo.net/en/sorting">VisuAlgo</a> possui explicações exemplificadas sobre alguns algoritmos de ordenação.</p>
+
+<h4>Bubble sort</h4>
+
+<p>O número de ciclos de comparações será igual ao número de itens do array. Ou seja, se o array tem 5 itens, nós vamos fazer 5 vezes a comparação entre cada um dos itens.</p>
+
+<h2>Impressão de um array</h2>
+
+<p> O professor usou o seguinte código para imprimir o array de uma forma mais palatável:
+    <pre>
+        var linha = string.Join(", ", array);
+        System.Console.WriteLine(linha);
+    </pre>
+</p>
+
+<p>Quero ver o que acontece quando damos apenas um System.Console.WriteLine(array)</p>
+
+<h3>Classe Array</h3>
+
+<p>É uma classe nativa do System que oferece diversos métodos e atributos de um array. Como por exemplo a ordenação.</p>
+
+<p>Para utilizá-la, temos que estar usando o namespace System.</p>
+
+<p>Um dos métodos é o Array.Sort(array_que_queremos_trabalhar).</p>
+
+<p></p>
 
