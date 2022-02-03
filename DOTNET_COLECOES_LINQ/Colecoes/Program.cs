@@ -1,5 +1,7 @@
-﻿using Colecoes.Helper;
-using System;
+
+﻿using System;
+using Colecoes.Helper;
+
 
 namespace Colecoes
 {
@@ -7,10 +9,18 @@ namespace Colecoes
     {
         static void Main(string[] args)
         {
+            
 
-            int[] numeros = new int[]{1,9,6,2,4};
+            //Ordenação de um array na unha
 
-            OperacoesArray op = new OperacoesArray();
+            // OperacoesArray op = new OperacoesArray();
+
+            // int[] numeros = new int[]{5,6,8,9,3};
+            // op.ImprimirArray(numeros);
+
+            // op.OrdenarArray(ref numeros);
+
+            // op.ImprimirArray(numeros);
 
             //Verificando se todos os elementos são maiores que um valor
             int valor = 1;
