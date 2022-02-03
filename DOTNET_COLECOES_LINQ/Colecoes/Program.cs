@@ -1,5 +1,7 @@
+
 ﻿using System;
 using Colecoes.Helper;
+
 
 namespace Colecoes
 {
@@ -20,7 +22,17 @@ namespace Colecoes
 
             // op.ImprimirArray(numeros);
 
-            // //Array multidimensional
+            //Verificando se todos os elementos são maiores que um valor
+            int valor = 1;
+            bool res = op.TodosMaioresQue(numeros,valor);
+            System.Console.WriteLine(res);
+            
+            //Verificando se um item existe em um array
+            
+            // bool existe = op.Existe(numeros, 9);
+            // System.Console.WriteLine(existe);
+
+            //Array multidimensional
 
             // int[,] matriz = new int[4,2]
             // {
