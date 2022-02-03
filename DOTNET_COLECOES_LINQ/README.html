@@ -125,3 +125,56 @@
         <p>O exemplo é a conversão de um array para o tipo String.</p>
     </li>
 </ul>
+
+
+<h2>Coleções genéricas</h2>
+
+<p>Foi criado em Helper a classe OperacoesLista.cs</p>
+
+<h3>Métodos</h3>
+
+<h4>Adicionando itens à lista</h4>
+
+<p>Usamos o método Add.</p>
+<p>Podemos já começar uma lista instanciando elementos, como em um array.</p>
+
+<h4>Exibir o tamanho que a lista está</h4>
+
+<p>nome_lista.Count</p>
+
+<h4>Percorrer a lista</h4>
+
+<p>foreach(var item in nome_lista){}</p>
+<p>for(int i = 0; i &lt; nome_lista.Count; i++){}</p>
+
+<h4>Remover elementos da lista</h4>
+
+<ul>
+    <li>
+        nome_lista.Remove(string item)
+        <p>Remove apeenas um elemento da lista e há o retorno booleano se deu certo ou não.</p>
+        <p>Os elementos são reposicionados em relação ao índice dentro da lista automaticamente, diferentemente do array que não permite remoção de itens e para ter algo semelhante teríamos que ter muito código.</p>
+    </li>
+    <li>
+        nome_lista.RemoveAll(Predicate)
+        <p>Remove um ou mais elementos que satisfaçam à lógica do Predicate.</p>
+    </li>
+    <li>
+        nome_lista.RemoveAt(int index)
+        <p>Remove o item baseado no índice</p>
+    </li>
+    <li>
+        nome_lista.RemoveRange(int index, int count)
+        <p>Remove count elementos a partir do índice index</p>
+    </li>
+</ul>
+
+<h4>Adicionando elementos de outra coleção</h4>
+
+<p>nome_lista.AddRange(lista_a_adicionar)</p>
+
+<p>A nome_lista e lista_a_adicionar tem que ser do mesmo tipo. A lista_a_adicionar pode ser um array.</p>
+
+<h4>Adicionando elementos em índices específicos</h4>
+
+<p>nome_lista.Insert(int index, $tipo$ item)</p>
