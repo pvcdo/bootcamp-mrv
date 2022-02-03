@@ -86,7 +86,87 @@
 
 <p>Interessante notar que ao dar o comando System.Console.WriteLine("Este código {0}", variável), o {0} será substituído pelo valor da variável na saída do texto no console.</p>
 
-<h2>Redimensionar o array em tempo de execução</h2>
+<h2>Coleções genéricas (lista)</h2>
 
-<p></p>
+<p>Uma coleção do c# parecida com array, só que de alto nível, ou seja, sem termos que nos preocupar com algumas nuances de um Array.</p>
+
+<p>Uma coleção genérica tem tamanhos dinâmicos.</p>
+
+<p>A lista e outros tipos de coleção genérica fica no espaço System.Collections.Generic.</p>
+
+<p>O primeiro item de uma lista também é o 0.</p>
+
+<h3>Declaração</h3>
+
+<p>Para declarar uma lista nós temos que dar um ""using System.Collections.Generic"" e no corpo do código o comando ""List&lt;tipo_lista&gt; nome_lista = new List&lt;tipo_lista&gt;()"". Os tipos da lista podem ser string, double, int, etc.</p>
+
+<h3>Métodos</h3>
+
+<p>Detalhados no <a href="../../DOTNET_COLECOES_LINQ/README.html">README.html</a> da prática a aula.</p>
+
+<h2>Coleções específicas</h2>
+
+<p>Implementam regras para sua ordem de acesso e manipulação de seus elementos. Duas dessas coleções são a Queue (fila) e Stack (pilha), aquela obedece à ordem FIFO (First In, First Out), esta à LIFO (Last In, First Out).</p>
+
+<h3>Queue - Declaração</h3>
+
+<p>Assim como a List, para declarar uma Queue nós temos que dar um ""using System.Collections.Generic"" e no corpo do código o comando ""Queue&lt;tipo_queue&gt; nome_queue = new Queue&lt;tipo_queue&gt;()"". Os tipos da queue podem ser string, double, int, etc.</p>
+
+<img src="img/fila.PNG" alt="">
+
+<h3>Queue - Métodos</h3>
+
+<ul>
+    <li>
+        nome_queue.Enqueue
+        <p>Adiciona um elemento no fim da fila</p>
+    </li>
+    <li>
+        nome_queue.Dequeue
+        <p>Remove e retorna o objeto atual no começo da fila.</p>
+    </li>
+    <li>
+        nome_queue.Peek
+        <p>Retorna o objeto do começo da fila</p>
+    </li>
+    <li>
+        nome_queue.Count
+        <p>Retorna o número de elementos que está na fila.</p>
+    </li>
+</ul>
+
+<h4>Percorrer a fila</h4>
+
+<p>Usamos while e dentro dele os comandos de Dequeue e Peek.</p>
+
+<h3>Stack - Declaração</h3>
+
+<p>Assim como a List, para declarar uma Stack nós temos que dar um ""using System.Collections.Generic"" e no corpo do código o comando ""Stack&lt;tipo_stack&gt; nome_stack = new Stack&lt;tipo_stack&gt;()"". Os tipos da stack podem ser string, double, int, etc.</p>
+
+<img src="img/pilha.PNG" alt="">
+
+<h3>Stack - Métodos</h3>
+
+<ul>
+    <li>
+        nome_stack.Push
+        <p>Adiciona um elemento no topo (fim) da fila</p>
+    </li>
+    <li>
+        nome_stack.Pop
+        <p>Remove e retorna o objeto do topo (fim) da fila.</p>
+    </li>
+    <li>
+        nome_stack.Peek
+        <p>Retorna o objeto do topo (fim) da fila</p>
+    </li>
+    <li>
+        nome_stack.Count
+        <p>Retorna o número de elementos que está na pilha.</p>
+    </li>
+</ul>
+
+<h4>Percorrer a pilha</h4>
+
+<p>Usamos while e dentro dele os comandos de Pop e Peek.</p>
 
