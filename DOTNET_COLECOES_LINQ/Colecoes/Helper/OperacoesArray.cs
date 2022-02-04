@@ -5,7 +5,7 @@ namespace Colecoes.Helper
 
         public void ImprimirArray(int[] array)
         {
-            for (int i = 0; i < array.length; i++)
+            for (int i = 0; i < array.Length; i++)
             {
                 System.Console.WriteLine(array[i]);
             }        
@@ -15,9 +15,9 @@ namespace Colecoes.Helper
         {
             int temp = 0;
 
-            for (int i = 0; i < array.length; i++)
+            for (int i = 0; i < array.Length; i++)
             {
-                for (int j = 0; j < array.length-1; j++)
+                for (int j = 0; j < array.Length-1; j++)
                 {
                     if(array[j]>array[j+1])
                     {
