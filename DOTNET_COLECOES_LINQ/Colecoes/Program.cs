@@ -12,10 +12,10 @@ namespace Colecoes
 
             //Ordenação de um array na unha
 
-            // OperacoesArray op = new OperacoesArray();
+            OperacoesArray op = new OperacoesArray();
 
-            // int[] numeros = new int[]{5,6,8,9,3};
-            // op.ImprimirArray(numeros);
+            int[] numeros = new int[]{5,6,8,9,3};
+            op.ImprimirArray(numeros);
 
             // op.OrdenarArray(ref numeros);
 
