@@ -7,6 +7,8 @@
     <li><a href="https://github.com/leonardo-buta">github</a></li>
 </ul>
 
+<a href="">Documentação</a> sobre coleções da Microsoft.
+
 <h2>Arrays</h2>
 
 <p>Array é um conjunto de dados que armazena valores do mesmo tipo, com um tamnho fixo.</p>
@@ -170,3 +172,100 @@
 
 <p>Usamos while e dentro dele os comandos de Pop e Peek.</p>
 
+<h3>Dicionários</h3>
+
+<p>É uma coleção para armazenar onde se armazena uma chave e um valor. O dicionário armazena a chave em hash.</p>
+<p>Não é permitido ter chaves repetidas.</p>
+
+<h3>Declaração</h3>
+
+<p>Dictionary&lt;tipo_chave,tipo_valor&gt; nome_dicionario = new <p>Dictionary&lt;tipo_chave,tipo_valor&gt;();</p>
+
+<h3>Métodos</h3>
+
+<h4>Adicionar itens</h4>
+
+<p>Podemos inicializar com valores, provavelmente igual nas outras coleções</p>
+
+<p>Podemos usar tambem o método nome_dicionario.Add(chave,valor)</p>
+
+<h4>Percorrendo dictionary</h4>
+
+<pre>
+    foreach(KeyValuePair&lt;tipo_chave,tipo_valor&gt; item in nome_dicionario)
+    {
+        System.Console.WriteLine($"chave: {item.Key}, valor: {item.Value}"); 
+    }
+</pre>
+
+<p>O código do foreach acima indica que o item é um conjunto chave-valor, sendo que podemos acessar cada um deles a partir do atributo respectivo (Key para chave e Value para valor) passado à referência do par (no caso item).</p>
+
+<h4>Manipulando valores</h4>
+
+<ul>
+    <li>Retornar um valor
+        <p>nome_dicionario[chave]</p>
+    </li>
+    <li>Atualizar um valor
+        <p>nome_dicionario[chave] = valor</p>
+    </li>
+    <li>Remover um valor
+        <p>nome_dicionario.Remove(chave)</p>
+        <p>Obviamente tanto o valor quanto a chave são removidos.</p>
+    </li>
+</ul>
+
+<h4>Acesso de maneira segura</h4>
+
+<p>Quando tentamos acessar de maneira simples uma chave que não existe no dictionary o código quebra. Para evitar isso e fazer acessos de maneira segura usamos o método TryGetValue()</p>
+
+<pre>
+    if(nome_dicionario.TryGetValue(chave_procurada, out tipo_valor variavel_valor)
+    {
+        System.Console.WriteLine(variavel_valor);
+    }else
+    {
+        System.Console.WriteLine("Chave não encontrada");
+    }
+</pre>
+
+<p>O método TryGetValue retorna um booleano e em caso de true ele vai permitir manipular a variavel_valor, que vai armazenar o valor que está associado à chave procurada e encontrada no dicionário.</p>
+
+<h2>Operações LINQ</h2>
+
+<p>Language-Integrated Query (consulta integrada à linguagem). É uma maneira de utilizar sintaxe de consulta padronizada para coleções de objetos.</p>
+
+<p>Pode se integrar a qualquer tipo de coleção.</p>
+
+<p>Para utilizá-la nós temos que dar using System.Linq</p>
+
+<img src="img/LINQ.PNG" alt="">
+
+<p>Nos exemplos da imagem os retornos seram armazenados em listas de nomes numQuery1 e numQuery2. <span style="color: red;">O orderby da segundo exemplo está errado, o certo seria ""num"" ao invés de ""n"".</span></p>
+
+<h3>Valores mínimo, máximo e médio</h3>
+
+<ul>
+    <li>mínimo
+        nome_colecao.Min();
+    </li>
+    <li>máximo
+        nome_colecao.Max();
+    </li>
+    <li>média
+        nome_colecao.Average();
+    </li>
+</ul>
+
+<h3>Sum e Distinct</h3>
+
+<h4>Sum</h4>
+
+<p>nome_colecao.Sum()</p>
+<p>Retorna a soma dos elementos da coleção.</p>
+
+<h4>Distinct</h4>
+
+<p>nome_colecao.Distinct().ToColeção()</p>
+<p>Retorna uma coleção contendo os mesmo valores que a original, porém sem repetição de valores, caso haja na original.</p>
+<p>O ToColeção deve ser substituído por ToArray, ToList, ou o que mais fizer sentido para a aplicação.</p>
