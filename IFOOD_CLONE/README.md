@@ -2,7 +2,9 @@
 
 Projeto do curso da trilha do Bootcamp da MRV.
 
-O projeto está [nesta página](https://github.com/pablohdev/app-ifood-clone) do github.
+Neste projeto criarei a interface de um marcador de hora de banho e tosa de petshop.
+
+O projeto base está [nesta página](https://github.com/pablohdev/app-ifood-clone) do github.
 
 ## Parte 1 -  Iniciando o projeto
 
@@ -22,7 +24,7 @@ Os códigos que serão exibidos na tela do dispositivo passarão pelo App.js que
 
 O professor colocou em assets as imagens que iremos utilizar.
 
-Em app.json podemos alterar o backgroundColor: "#F001A". Em src também teremos um assets, mais precisamente, src/assets/img. Em app.json podemos configurar várias coisas (mas pode dar descompatibilidade com o projeto que está hospedado na plataforma do expo).
+Em app.json podemos alterar o backgroundColor: "#F001A" (cor padrão). Em src também teremos um assets, mais precisamente, src/assets/img. Em app.json podemos configurar várias coisas (mas pode dar descompatibilidade com o projeto que está hospedado na plataforma do expo).
 
 Não usei isso => Em src/AppEntry.js colocamos `import 'react-native-gesture-handler';` logo no início de todo o código. Esse import é do react-navigation.
 
@@ -74,3 +76,16 @@ Em src/AppEntry.js alteramos para o seguinte:
     registerRootComponent(Routes);
 
 ```
+## Parte 3
+
+É a mesma da Parte 2. Eles repostaram a parte 2.
+
+## Parte 4
+
+Em Home ele colocou um texto, a imagem de entrada (banner), e dois textos, tudo isso dentro do style criado para a Home. Depois colocou dois botões. Esses botões são importados de src/components/Buttons, que também tem seu style.js. 
+
+## Parte 5
+
+Criou a página Principal como cópia de Home inicialmente. Também criou a página Main. Importou a página Main em routes.js e colocou no Stack.Screen. Alterou Stack.Navigator colocando a prop initialRouteName="Main". Ele teve que instalar pelo npm o `react-native-vector-icons/Feather` e em Main ele importou o Feather a partir desse módulo. No screenOption do Tab.Navigator ele fez alterações de iconName a partir de ifs comparando routes.name; o screenOption retorna um componente Feather. Ele ainda adicionou a prop tabBarOptions em Tab.Navigator fazendo suas alterações.  
+
+Criou a página Perfil baseada na Principal, fez sua importação em Main e a colocou na Tab.Screen do Tab.Navigator de Main.
