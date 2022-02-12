@@ -8,7 +8,6 @@ namespace Colecoes
     {
         static void Main(string[] args)
         {
-            
 
             //Ordenação de um array na unha
 
