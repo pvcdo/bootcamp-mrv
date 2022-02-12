@@ -68,7 +68,7 @@ Em src/AppEntry.js alteramos para o seguinte:
 
 ```js
 
-    import 'react-native-gesture-handler';
+    //import 'react-native-gesture-handler';
     import registerRootComponent from 'expo/build/launch/registerRootComponent';
 
     import Routes from './routes';
@@ -86,6 +86,40 @@ Em Home ele colocou um texto, a imagem de entrada (banner), e dois textos, tudo 
 
 ## Parte 5
 
-Criou a página Principal como cópia de Home inicialmente. Também criou a página Main. Importou a página Main em routes.js e colocou no Stack.Screen. Alterou Stack.Navigator colocando a prop initialRouteName="Main". Ele teve que instalar pelo npm o `react-native-vector-icons/Feather` e em Main ele importou o Feather a partir desse módulo. No screenOption do Tab.Navigator ele fez alterações de iconName a partir de ifs comparando routes.name; o screenOption retorna um componente Feather. Ele ainda adicionou a prop tabBarOptions em Tab.Navigator fazendo suas alterações.  
+Criou a página Principal como cópia de Home inicialmente. Também criou a página Main. Importou a página Main em routes.js e colocou no Stack.Screen. Alterou Stack.Navigator colocando a prop initialRouteName="Main". Ele teve que instalar pelo npm o `react-native-vector-icons` e em Main ele importou o Feather a partir desse módulo. No screenOption do Tab.Navigator ele fez alterações de iconName a partir de ifs comparando routes.name; o screenOption retorna um componente Feather. Ele ainda adicionou a prop tabBarOptions em Tab.Navigator fazendo suas alterações.  
 
 Criou a página Perfil baseada na Principal, fez sua importação em Main e a colocou na Tab.Screen do Tab.Navigator de Main.
+
+## Parte 6
+
+Ele vai consumir uma api para popular o app. A Api está no github do projeto base como "db.json".
+
+Em Principal ele importou os hooks useState (trabalhar com estados) e useEffect (gerenciar eventos no componente, como ele será montado, desmontado, etc) do react, também utilizou alguns do react-native.
+
+O useState retorna dois parâmetros em um array, o estado e o método para manipular este estado.
+
+O useEffect dispara uma função quando algo acontecer. Recebe uma função e recebe quando a função será chamada. Se não colocarmos nenhum parâmetro na segunda posição o useEffect ficará em loop. O useEffect no nosso caso será para consultar a API, e no caso essa consulta será assíncrona em relação à execução do app, portanto temos que usar uma função assíncrona dentro do useEffect. Não podemos declarar como async a função parâmetro (callback) do hook, portanto temos que criar e chamar uma async function buscaDados() dentro do callback. A função buscaDados dá um fetch na api e parseia a resposta para json, passando os atributos deste json para os componentes da tela.
+
+## Parte 7
+
+O retorno do Principal é dependente do estado "loaded", que caso seja false renderiza na tela o ActivityIndicator, que é um loader do react-native; caso true renderiza o texto "Principal" a partir do componente ViewHome(props).
+
+No style do Principal ele usa o componente Dimensions do reat-native que pega as dimensões do dispositivo que está executando o app. Em Principal ele também importou todos os estilos de style.
+
+SafeAreaView é usado para que o app respeite as bordas do dispositivo.
+
+## Parte 8
+
+Criou o components/RestauranteItem, com seu par index e style. No index é definido o retorno desse componente, com os subcomponentes RestauranteView, RestauranteFoto e RestauranteInfo baseados no style.js. O RestauranteItem recebe parâmetros para ser montado. Ele usou o componente AntDesign importado do @expo/vector-icons. Esse componente renderiza ícones a partir do expo.
+
+Ele importou o RestauranteItem para o Principal e em ViewHome do Principal ele fez um map no estado restaurantes (que é populado no início da montagem do index.js de Principal, a partir do useEffect, se transformando em um array de objetos, sendo que cada linha do array é um objeto que representa um restaurante), portanto, cada restaurante gera um RestauranteItem.
+
+## Parte 9
+
+Criou components/CategoriaItem e components/BannerItem, fazendo a importação destes em Principal. 
+
+Em Principal, CategoriaView e BannerView são ScrollView importada de style e por isso aceita as propriedades horizontal e showsHorizontalScrollIndicator para definirmos se a disposição dos itens será na horizontal e se aparecerá a barra de rolagem horizontal.
+
+Em routes.js em initialRouteName colocamos "Home".
+
+******************* Falta finalizar esta aula *******************
