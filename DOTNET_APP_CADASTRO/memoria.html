@@ -25,20 +25,19 @@
     <li>Dentro da pasta do projeto ele criou uma pasta chamada Classes e outra chamada Interfaces</li>
     <li>Todas as classes criadas dentro dessa pasta terão o namespace DIO.Series</li>
     <li>Dentro da pasta Classes ele criou uma classe abstrata chamada EntidadeBase.cs</li>
-    <li>o método set de EntidadeBase é protected</li>
-    <li>Todas as classes usarão o namespace DIO.Series</li>
-    <li>cria o atributo public int id nela</li>
+    <li>criou o atributo id com o método set como protected</li>
+    <li>Todas as classes usarão o namespace DIO.Serie</li>
     <li>Criou a classe Serie.cs, que herda EntidadeBase.cs</li>
-    <li>Serie recebe os atributos Genero, Titulo, Descricao e Ano</li>
+    <li>Serie recebe os atributos private Genero Genero, string Titulo, string Descricao e int Ano</li>
     <li>Genero é tipada como Genero, pois é criado um "Enum" com os códigos de cada gênero de filme</li>
     <li>Portanto criamos uma classe Genero.cs em uma pasta chamada Enum na raiz do projeto</li>
     <li>Ainda em Serie nós criamos o metodo Serie (que portanto é o construtor da classe) que tem como parâmetros os mesmos  atributos de Serie.cs e os recebem como valor dentro do método</li>
     <li>Criou a função ToString para sobrepor à função já existente em System. Esse código exibe na tela de forma formatada quais são os atributos da série cadastrada.
         <p>Usa Enviroment.NewLine, que é uma forma de dar uma quebra de linha, sendo esse código padrão para qualquer tipo de ambiente de desenvolvimento.</p>
     </li>
-    <li>cria métodos para retornar o título e o retorno da série</li>
+    <li>cria métodos para retornar o título e o id da série</li>
     <h2>Parte 3</h2>
-    <li>O professor vai usar um design pattern que utiliza uma interface como repositório, no caso do projeto para armazenar as séries cadastradas no app. Para isso vai criar Interfaces/IRepositorio.cs</li>
+    <li>O professor vai usar um design pattern que utiliza uma interface como repositório. No caso do projeto para armazenar as séries cadastradas no app. Para isso vai criar Interfaces/IRepositorio.cs</li>
     <li>IRepositorio será a seguinte
         <pre>
             using System.Collections.Generic;
@@ -58,7 +57,7 @@
         </pre>
     </li>
     <li>Em IRepositorio usará System.Collections.Generic e o namespace é DIO.Series.Interfaces</li>
-    <li>faz public interface IRepositorio&lt;T&gt;, onde o T é uma classe genérica (ou seja, o repositório pode receber uma classe como tipo)</li>
+    <li>faz public interface IRepositorio&lt;T&gt;, onde o T é uma classe genérica (ou seja, o repositório pode receber uma classe qualquer como tipo)</li>
     <li>criou uma classe chamada SerieRepositorio.cs, que implementa a interface IRepositorio
     <li>dentro de SerieRepositorio instanciamos um <pre> List&lt;Serie&gt; listaSerie = new List&lt;Serie&gt;</pre> e depois os métodos de IRepositorio 
         <p>No caso, listaSerie é inicialmente uma lista vazia que receberá items que são instâncias de Serie.cs</p>
