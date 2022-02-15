@@ -1,2 +1,15 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+﻿using System;
+
+namespace DIO.Series
+{
+    class Program
+    {
+        static SerieRepositorio repositorio = new SerieRepositorio();
+        static void Main(string[] args)
+        {
+            
+        }
+
+    }
+
+}
