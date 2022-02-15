@@ -18,9 +18,9 @@
 
 <p>Semelhante a classes abstratas, mas não possui atributos. Não pode definir como os métodos devem ser implementados. Basicamente é uma lista de métodos que <b>devem</b> ser implementados. As classes implementam interfaces (1 classe-filha => n interfaces).</p>
 
-<h2>Parte 2</h2>
-
 <ol>
+    <h2>Parte 2</h2>
+
     <li>O professor criou um novo projeto console dotnet chamado DIO.Series</li>
     <li>Dentro da pasta do projeto ele criou uma pasta chamada Classes e outra chamada Interfaces</li>
     <li>Todas as classes criadas dentro dessa pasta terão o namespace DIO.Series</li>
@@ -36,7 +36,9 @@
         <p>Usa Enviroment.NewLine, que é uma forma de dar uma quebra de linha, sendo esse código padrão para qualquer tipo de ambiente de desenvolvimento.</p>
     </li>
     <li>cria métodos para retornar o título e o id da série</li>
+    
     <h2>Parte 3</h2>
+    
     <li>O professor vai usar um design pattern que utiliza uma interface como repositório. No caso do projeto para armazenar as séries cadastradas no app. Para isso vai criar Interfaces/IRepositorio.cs</li>
     <li>IRepositorio será a seguinte
         <pre>
@@ -62,4 +64,20 @@
     <li>dentro de SerieRepositorio instanciamos um <pre> List&lt;Serie&gt; listaSerie = new List&lt;Serie&gt;</pre> e depois os métodos de IRepositorio 
         <p>No caso, listaSerie é inicialmente uma lista vazia que receberá items que são instâncias de Serie.cs</p>
     </li>
+
+    <h2>Parte 4</h2>
+
+    <li>o método SerieRepositorio.Exclui apenas altera o valor do atributo Serie.Excluido através do método Serie.setExcluido
+        <p>Isso serve para não apagar de fato uma informação, para não gerar reordenação dos índices da lista e outros problemas.</p>
+    </li>
+    <li>Em program.cs ele criou a tela inicial (ObterOpcaoUsuario), leitura da opção escolhida, instanciou um novo static objeto de SerieRepositorio, e começou a explicar cada um dos métodos implementados em program.cs, nesta seção foram ListarSeries e InserirSerie</li>        
+
+    <h2>Parte 5</h2>
+
+    <li>Continuou explicando os métodos implementados em program.cs, desta vez AtualizarSerie, VisualizarSerie e ExcluirSerie
+        <ul>
+            <li>Em VisualizarSerie o Console.WriteLine acaba dando o método ToString da série.</li>
+        </ul>
+    </li>
+    <li>criou na classe Serie um getExcluido, que recupera o valor do atributo Excluido</li>
 </ol>
