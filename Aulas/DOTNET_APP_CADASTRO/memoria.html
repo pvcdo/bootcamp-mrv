@@ -1,0 +1,34 @@
+<h1>Criando um APP simples de cadastro de séries em .NET</h1>
+
+<H2>Parte 1 - Introdução</H2>
+
+<ul>
+    <li>O objetivo é fazer um CRUD de séries de televisão.</li>
+</ul>
+
+<h3>Revisão</h3>
+
+<h4>Classes abstratas</h4>
+
+<p>São classes que podem conter métodos abstratos. Essas classes não são instanciadas, mas só servem como "base" para outras classes, porém, as classes que herdam seus métodos e atributos devem implementá-los. As subclasses herdam as classes (1 classe-filha => 1 classe-mãe).</p>
+
+<h4>Interfaces</h4>
+
+<p>Semelhante a classes abstratas, mas não possui atributos. Não pode definir como os métodos devem ser implementados. Basicamente é uma lista de métodos que <b>devem</b> ser implementados. As classes implementam interfaces (1 classe-filha => n interfaces).</p>
+
+<h2>Parte 2</h2>
+
+<ol>
+    <li>O professor criou um novo projeto console dotnet chamado DIO.Series</li>
+    <li>Dentro da pasta do projeto ele criou uma pasta chamada Classes</li>
+    <li>Dentro da pasta Classes ele criou uma classe abstrata chamada EntidadeBase.cs</li>
+    <li>o método set de EntidadeBase é protected</li>
+    <li>Todas as classes usarão o namespace DIO.Series</li>
+    <li>cria id nela</li>
+    <li>Criou a classe Serie.cs, que herda EntidadeBase.cs</li>
+    <li>Serie recebe os atributos Genero, Titulo, Descricao e Ano</li>
+    <li>Genero é tipada como Genero, pois é criado um "Enum" com os códigos de cada gênero de filme</li>
+    <li>Portanto criamos uma classe Genero.cs em uma pasta chamada Enum na raiz do projeto</li>
+    <li>Ainda em Serie nós criamos o metodo Serie (que portanto é o construtor da classe) que tem como parâmetros os mesmos  atributos de Serie.cs e os recebem como valor dentro do método</li>
+    <li>Criou a </li>
+</ol>

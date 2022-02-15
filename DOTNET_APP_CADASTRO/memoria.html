@@ -1,0 +1,66 @@
+<h1>Criando um APP simples de cadastro de séries em C#.NET</h1>
+
+<p>O intuito deste documento é fazer anotações acerca das ações explicadas pelo professor no projeto para que sejam executadas em momento oportuno (uma vez que algumas aulas serão vista no trabalho) e para maior detalhamento das etapas do projeto.</p>
+
+<H2>Parte 1 - Introdução</H2>
+
+<ul>
+    <li>O objetivo é fazer um CRUD de séries de televisão.</li>
+</ul>
+
+<h3>Revisão</h3>
+
+<h4>Classes abstratas</h4>
+
+<p>São classes que podem conter métodos abstratos. Essas classes não são instanciadas, mas só servem como "base" para outras classes, porém, as classes que herdam seus métodos e atributos devem implementá-los. As subclasses herdam as classes (1 classe-filha => 1 classe-mãe).</p>
+
+<h4>Interfaces</h4>
+
+<p>Semelhante a classes abstratas, mas não possui atributos. Não pode definir como os métodos devem ser implementados. Basicamente é uma lista de métodos que <b>devem</b> ser implementados. As classes implementam interfaces (1 classe-filha => n interfaces).</p>
+
+<h2>Parte 2</h2>
+
+<ol>
+    <li>O professor criou um novo projeto console dotnet chamado DIO.Series</li>
+    <li>Dentro da pasta do projeto ele criou uma pasta chamada Classes e outra chamada Interfaces</li>
+    <li>Todas as classes criadas dentro dessa pasta terão o namespace DIO.Series</li>
+    <li>Dentro da pasta Classes ele criou uma classe abstrata chamada EntidadeBase.cs</li>
+    <li>o método set de EntidadeBase é protected</li>
+    <li>Todas as classes usarão o namespace DIO.Series</li>
+    <li>cria o atributo public int id nela</li>
+    <li>Criou a classe Serie.cs, que herda EntidadeBase.cs</li>
+    <li>Serie recebe os atributos Genero, Titulo, Descricao e Ano</li>
+    <li>Genero é tipada como Genero, pois é criado um "Enum" com os códigos de cada gênero de filme</li>
+    <li>Portanto criamos uma classe Genero.cs em uma pasta chamada Enum na raiz do projeto</li>
+    <li>Ainda em Serie nós criamos o metodo Serie (que portanto é o construtor da classe) que tem como parâmetros os mesmos  atributos de Serie.cs e os recebem como valor dentro do método</li>
+    <li>Criou a função ToString para sobrepor à função já existente em System. Esse código exibe na tela de forma formatada quais são os atributos da série cadastrada.
+        <p>Usa Enviroment.NewLine, que é uma forma de dar uma quebra de linha, sendo esse código padrão para qualquer tipo de ambiente de desenvolvimento.</p>
+    </li>
+    <li>cria métodos para retornar o título e o retorno da série</li>
+    <h2>Parte 3</h2>
+    <li>O professor vai usar um design pattern que utiliza uma interface como repositório, no caso do projeto para armazenar as séries cadastradas no app. Para isso vai criar Interfaces/IRepositorio.cs</li>
+    <li>IRepositorio será a seguinte
+        <pre>
+            using System.Collections.Generic;
+
+            namespace DIO.Series.Interfaces
+            {
+                public interface IRepositorio<T>
+                {
+                    List<T> Lista(); //método Lista retorna uma lista de items de classe T
+                    T RetornaPorId(int id); //retorna um objeto de classe T        
+                    void Insere(T serie);        
+                    void Exclui(int id);        
+                    void Atualiza(int id, T serie);
+                    int ProximoId();
+                }
+            }
+        </pre>
+    </li>
+    <li>Em IRepositorio usará System.Collections.Generic e o namespace é DIO.Series.Interfaces</li>
+    <li>faz public interface IRepositorio&lt;T&gt;, onde o T é uma classe genérica (ou seja, o repositório pode receber uma classe como tipo)</li>
+    <li>criou uma classe chamada SerieRepositorio.cs, que implementa a interface IRepositorio
+    <li>dentro de SerieRepositorio instanciamos um <pre> List&lt;Serie&gt; listaSerie = new List&lt;Serie&gt;</pre> e depois os métodos de IRepositorio 
+        <p>No caso, listaSerie é inicialmente uma lista vazia que receberá items que são instâncias de Serie.cs</p>
+    </li>
+</ol>
