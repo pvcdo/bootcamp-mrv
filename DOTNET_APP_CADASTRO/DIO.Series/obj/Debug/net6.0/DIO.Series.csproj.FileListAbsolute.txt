@@ -13,3 +13,18 @@ D:\Paulo Victor\Estudos\Programação\DIO\DIO\Bootcamps\bootcamp-mrv\DOTNET_APP_
 D:\Paulo Victor\Estudos\Programação\DIO\DIO\Bootcamps\bootcamp-mrv\DOTNET_APP_CADASTRO\DIO.Series\obj\Debug\net6.0\ref\DIO.Series.dll
 D:\Paulo Victor\Estudos\Programação\DIO\DIO\Bootcamps\bootcamp-mrv\DOTNET_APP_CADASTRO\DIO.Series\obj\Debug\net6.0\DIO.Series.pdb
 D:\Paulo Victor\Estudos\Programação\DIO\DIO\Bootcamps\bootcamp-mrv\DOTNET_APP_CADASTRO\DIO.Series\obj\Debug\net6.0\DIO.Series.genruntimeconfig.cache
+C:\Users\pr114067\Desktop\Paulo\estudos\programacao\bootcamp-mrv\DOTNET_APP_CADASTRO\DIO.Series\bin\Debug\net6.0\DIO.Series.exe
+C:\Users\pr114067\Desktop\Paulo\estudos\programacao\bootcamp-mrv\DOTNET_APP_CADASTRO\DIO.Series\bin\Debug\net6.0\DIO.Series.deps.json
+C:\Users\pr114067\Desktop\Paulo\estudos\programacao\bootcamp-mrv\DOTNET_APP_CADASTRO\DIO.Series\bin\Debug\net6.0\DIO.Series.runtimeconfig.json
+C:\Users\pr114067\Desktop\Paulo\estudos\programacao\bootcamp-mrv\DOTNET_APP_CADASTRO\DIO.Series\bin\Debug\net6.0\DIO.Series.dll
+C:\Users\pr114067\Desktop\Paulo\estudos\programacao\bootcamp-mrv\DOTNET_APP_CADASTRO\DIO.Series\bin\Debug\net6.0\DIO.Series.pdb
+C:\Users\pr114067\Desktop\Paulo\estudos\programacao\bootcamp-mrv\DOTNET_APP_CADASTRO\DIO.Series\obj\Debug\net6.0\DIO.Series.csproj.AssemblyReference.cache
+C:\Users\pr114067\Desktop\Paulo\estudos\programacao\bootcamp-mrv\DOTNET_APP_CADASTRO\DIO.Series\obj\Debug\net6.0\DIO.Series.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\pr114067\Desktop\Paulo\estudos\programacao\bootcamp-mrv\DOTNET_APP_CADASTRO\DIO.Series\obj\Debug\net6.0\DIO.Series.AssemblyInfoInputs.cache
+C:\Users\pr114067\Desktop\Paulo\estudos\programacao\bootcamp-mrv\DOTNET_APP_CADASTRO\DIO.Series\obj\Debug\net6.0\DIO.Series.AssemblyInfo.cs
+C:\Users\pr114067\Desktop\Paulo\estudos\programacao\bootcamp-mrv\DOTNET_APP_CADASTRO\DIO.Series\obj\Debug\net6.0\DIO.Series.csproj.CoreCompileInputs.cache
+C:\Users\pr114067\Desktop\Paulo\estudos\programacao\bootcamp-mrv\DOTNET_APP_CADASTRO\DIO.Series\obj\Debug\net6.0\DIO.Series.dll
+C:\Users\pr114067\Desktop\Paulo\estudos\programacao\bootcamp-mrv\DOTNET_APP_CADASTRO\DIO.Series\obj\Debug\net6.0\refint\DIO.Series.dll
+C:\Users\pr114067\Desktop\Paulo\estudos\programacao\bootcamp-mrv\DOTNET_APP_CADASTRO\DIO.Series\obj\Debug\net6.0\DIO.Series.pdb
+C:\Users\pr114067\Desktop\Paulo\estudos\programacao\bootcamp-mrv\DOTNET_APP_CADASTRO\DIO.Series\obj\Debug\net6.0\DIO.Series.genruntimeconfig.cache
+C:\Users\pr114067\Desktop\Paulo\estudos\programacao\bootcamp-mrv\DOTNET_APP_CADASTRO\DIO.Series\obj\Debug\net6.0\ref\DIO.Series.dll
