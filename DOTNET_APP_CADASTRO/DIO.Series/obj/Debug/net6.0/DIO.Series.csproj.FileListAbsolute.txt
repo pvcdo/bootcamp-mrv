@@ -1,0 +1,15 @@
+D:\Paulo Victor\Estudos\Programação\DIO\DIO\Bootcamps\bootcamp-mrv\DOTNET_APP_CADASTRO\DIO.Series\obj\Debug\net6.0\DIO.Series.csproj.AssemblyReference.cache
+D:\Paulo Victor\Estudos\Programação\DIO\DIO\Bootcamps\bootcamp-mrv\DOTNET_APP_CADASTRO\DIO.Series\obj\Debug\net6.0\DIO.Series.GeneratedMSBuildEditorConfig.editorconfig
+D:\Paulo Victor\Estudos\Programação\DIO\DIO\Bootcamps\bootcamp-mrv\DOTNET_APP_CADASTRO\DIO.Series\obj\Debug\net6.0\DIO.Series.AssemblyInfoInputs.cache
+D:\Paulo Victor\Estudos\Programação\DIO\DIO\Bootcamps\bootcamp-mrv\DOTNET_APP_CADASTRO\DIO.Series\obj\Debug\net6.0\DIO.Series.AssemblyInfo.cs
+D:\Paulo Victor\Estudos\Programação\DIO\DIO\Bootcamps\bootcamp-mrv\DOTNET_APP_CADASTRO\DIO.Series\obj\Debug\net6.0\DIO.Series.csproj.CoreCompileInputs.cache
+D:\Paulo Victor\Estudos\Programação\DIO\DIO\Bootcamps\bootcamp-mrv\DOTNET_APP_CADASTRO\DIO.Series\bin\Debug\net6.0\DIO.Series.exe
+D:\Paulo Victor\Estudos\Programação\DIO\DIO\Bootcamps\bootcamp-mrv\DOTNET_APP_CADASTRO\DIO.Series\bin\Debug\net6.0\DIO.Series.deps.json
+D:\Paulo Victor\Estudos\Programação\DIO\DIO\Bootcamps\bootcamp-mrv\DOTNET_APP_CADASTRO\DIO.Series\bin\Debug\net6.0\DIO.Series.runtimeconfig.json
+D:\Paulo Victor\Estudos\Programação\DIO\DIO\Bootcamps\bootcamp-mrv\DOTNET_APP_CADASTRO\DIO.Series\bin\Debug\net6.0\DIO.Series.dll
+D:\Paulo Victor\Estudos\Programação\DIO\DIO\Bootcamps\bootcamp-mrv\DOTNET_APP_CADASTRO\DIO.Series\bin\Debug\net6.0\ref\DIO.Series.dll
+D:\Paulo Victor\Estudos\Programação\DIO\DIO\Bootcamps\bootcamp-mrv\DOTNET_APP_CADASTRO\DIO.Series\bin\Debug\net6.0\DIO.Series.pdb
+D:\Paulo Victor\Estudos\Programação\DIO\DIO\Bootcamps\bootcamp-mrv\DOTNET_APP_CADASTRO\DIO.Series\obj\Debug\net6.0\DIO.Series.dll
+D:\Paulo Victor\Estudos\Programação\DIO\DIO\Bootcamps\bootcamp-mrv\DOTNET_APP_CADASTRO\DIO.Series\obj\Debug\net6.0\ref\DIO.Series.dll
+D:\Paulo Victor\Estudos\Programação\DIO\DIO\Bootcamps\bootcamp-mrv\DOTNET_APP_CADASTRO\DIO.Series\obj\Debug\net6.0\DIO.Series.pdb
+D:\Paulo Victor\Estudos\Programação\DIO\DIO\Bootcamps\bootcamp-mrv\DOTNET_APP_CADASTRO\DIO.Series\obj\Debug\net6.0\DIO.Series.genruntimeconfig.cache

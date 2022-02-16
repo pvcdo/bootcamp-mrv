@@ -9,23 +9,23 @@ namespace DIO.Series
         {
             return listaSeries;
         } 
-        void Insere(Serie serie)
+        public void Insere(Serie serie)
         {
             listaSeries.Add(serie);
         }
-        Serie RetornaPorId(int id)
+        public Serie RetornaPorId(int id)
         {
             return listaSeries[id];
         }
-        void Exclui(int id)
+        public void Exclui(int id)
         {
             listaSeries[id].setExcluido();
         }       
-        void Atualiza(int id, Serie serie)
+        public void Atualiza(int id, Serie serie)
         {
             listaSeries[id] = serie;
         }
-        int ProximoId()
+        public int ProximoId()
         {
             return listaSeries.Count;
         }
