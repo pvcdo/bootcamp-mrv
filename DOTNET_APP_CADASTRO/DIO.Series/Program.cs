@@ -80,6 +80,11 @@ namespace DIO.Series
 
 			System.Console.Write("Digite o Ano de Início da Série: ");
 			int entradaAno = int.Parse(System.Console.ReadLine());
+            while(entradaAno < 1900)
+            {
+                System.Console.Write("Data muito antiga, favor digitar um ano superior a 1900: ");
+			    entradaAno = int.Parse(System.Console.ReadLine());
+            }
 
 			System.Console.Write("Digite a Descrição da Série: ");
 			string entradaDescricao = System.Console.ReadLine();
@@ -91,6 +96,9 @@ namespace DIO.Series
 										descricao: entradaDescricao);
 
 			repositorio.Atualiza(indiceSerie, atualizaSerie);
+
+			System.Console.WriteLine();
+			System.Console.WriteLine("Série da posição {0} atualizada com sucesso!", atualizaSerie.getId());
 		}
         private static void ListarSeries()
 		{
@@ -145,6 +153,7 @@ namespace DIO.Series
 										ano: entradaAno,
 										descricao: entradaDescricao);
 
+			System.Console.WriteLine();
 			System.Console.WriteLine("Série {0} inserida com sucesso!", novaSerie.getTitulo());
 
             repositorio.Insere(novaSerie);

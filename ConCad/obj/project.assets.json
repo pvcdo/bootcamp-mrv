@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\pr114067\\Desktop\\Paulo\\estudos\\programacao\\bootcamp-mrv\\DOTNET_APP_CADASTRO\\DIO.Series\\DIO.Series.csproj",
-      "projectName": "DIO.Series",
-      "projectPath": "C:\\Users\\pr114067\\Desktop\\Paulo\\estudos\\programacao\\bootcamp-mrv\\DOTNET_APP_CADASTRO\\DIO.Series\\DIO.Series.csproj",
+      "projectUniqueName": "C:\\Users\\pr114067\\Desktop\\Paulo\\estudos\\programacao\\bootcamp-mrv\\ConCad\\ConCad.csproj",
+      "projectName": "ConCad",
+      "projectPath": "C:\\Users\\pr114067\\Desktop\\Paulo\\estudos\\programacao\\bootcamp-mrv\\ConCad\\ConCad.csproj",
       "packagesPath": "C:\\Users\\pr114067\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\pr114067\\Desktop\\Paulo\\estudos\\programacao\\bootcamp-mrv\\DOTNET_APP_CADASTRO\\DIO.Series\\obj\\",
+      "outputPath": "C:\\Users\\pr114067\\Desktop\\Paulo\\estudos\\programacao\\bootcamp-mrv\\ConCad\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\pr114067\\AppData\\Roaming\\NuGet\\NuGet.Config"

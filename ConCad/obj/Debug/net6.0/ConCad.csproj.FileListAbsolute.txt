@@ -1,0 +1,15 @@
+C:\Users\pr114067\Desktop\Paulo\estudos\programacao\bootcamp-mrv\ConCad\bin\Debug\net6.0\ConCad.exe
+C:\Users\pr114067\Desktop\Paulo\estudos\programacao\bootcamp-mrv\ConCad\bin\Debug\net6.0\ConCad.deps.json
+C:\Users\pr114067\Desktop\Paulo\estudos\programacao\bootcamp-mrv\ConCad\bin\Debug\net6.0\ConCad.runtimeconfig.json
+C:\Users\pr114067\Desktop\Paulo\estudos\programacao\bootcamp-mrv\ConCad\bin\Debug\net6.0\ConCad.dll
+C:\Users\pr114067\Desktop\Paulo\estudos\programacao\bootcamp-mrv\ConCad\bin\Debug\net6.0\ConCad.pdb
+C:\Users\pr114067\Desktop\Paulo\estudos\programacao\bootcamp-mrv\ConCad\obj\Debug\net6.0\ConCad.csproj.AssemblyReference.cache
+C:\Users\pr114067\Desktop\Paulo\estudos\programacao\bootcamp-mrv\ConCad\obj\Debug\net6.0\ConCad.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\pr114067\Desktop\Paulo\estudos\programacao\bootcamp-mrv\ConCad\obj\Debug\net6.0\ConCad.AssemblyInfoInputs.cache
+C:\Users\pr114067\Desktop\Paulo\estudos\programacao\bootcamp-mrv\ConCad\obj\Debug\net6.0\ConCad.AssemblyInfo.cs
+C:\Users\pr114067\Desktop\Paulo\estudos\programacao\bootcamp-mrv\ConCad\obj\Debug\net6.0\ConCad.csproj.CoreCompileInputs.cache
+C:\Users\pr114067\Desktop\Paulo\estudos\programacao\bootcamp-mrv\ConCad\obj\Debug\net6.0\ConCad.dll
+C:\Users\pr114067\Desktop\Paulo\estudos\programacao\bootcamp-mrv\ConCad\obj\Debug\net6.0\refint\ConCad.dll
+C:\Users\pr114067\Desktop\Paulo\estudos\programacao\bootcamp-mrv\ConCad\obj\Debug\net6.0\ConCad.pdb
+C:\Users\pr114067\Desktop\Paulo\estudos\programacao\bootcamp-mrv\ConCad\obj\Debug\net6.0\ConCad.genruntimeconfig.cache
+C:\Users\pr114067\Desktop\Paulo\estudos\programacao\bootcamp-mrv\ConCad\obj\Debug\net6.0\ref\ConCad.dll
