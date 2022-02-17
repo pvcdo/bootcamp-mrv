@@ -6,7 +6,7 @@ namespace ConCad.Vigas
     {
         public Viga(
             int id,
-            int [] dimensoes,
+            double [] dimensoes,
             double [] bitolas,
             int [] nArmacoes,
             List<string> apoios
@@ -22,7 +22,7 @@ namespace ConCad.Vigas
         }
 
         private string NomeViga { get; set; }
-        private int [] Dimensoes { get; set; }
+        private double [] Dimensoes { get; set; }
         private double [] Bitolas { get; set; }
         private int [] NArmacoes { get; set; }
         private List<string> Apoios { get; set; }
@@ -53,7 +53,7 @@ namespace ConCad.Vigas
             retorno += "Dimensões: " + this.Dimensoes[0] + "cm (L) " + this.Dimensoes[1] + "cm (A) " + this.Dimensoes[2] + "cm (C) " + Environment.NewLine;
             retorno += "Armação positiva: " + this.NArmacoes[0] + "ø" + this.Bitolas[0] + "mm" + Environment.NewLine;
             retorno += "Armação negativa: " + this.NArmacoes[1] + "ø" + this.Bitolas[1] + "mm" + Environment.NewLine;
-            retorno += "Apoiada em " + retornoApoios() + Environment.NewLine;
+            retorno += "Apoios: " + retornoApoios() + Environment.NewLine;
             
             return retorno;
         }

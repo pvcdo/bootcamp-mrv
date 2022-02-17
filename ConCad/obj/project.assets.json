@@ -8,26 +8,25 @@
     "net6.0": []
   },
   "packageFolders": {
-    "C:\\Users\\Paulo\\.nuget\\packages\\": {}
+    "C:\\Users\\pr114067\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Paulo Victor\\Estudos\\Programação\\DIO\\DIO\\Bootcamps\\bootcamp-mrv\\ConCad\\ConCad.csproj",
+      "projectUniqueName": "C:\\Users\\pr114067\\Desktop\\Paulo\\estudos\\programacao\\bootcamp-mrv\\ConCad\\ConCad.csproj",
       "projectName": "ConCad",
-      "projectPath": "D:\\Paulo Victor\\Estudos\\Programação\\DIO\\DIO\\Bootcamps\\bootcamp-mrv\\ConCad\\ConCad.csproj",
-      "packagesPath": "C:\\Users\\Paulo\\.nuget\\packages\\",
-      "outputPath": "D:\\Paulo Victor\\Estudos\\Programação\\DIO\\DIO\\Bootcamps\\bootcamp-mrv\\ConCad\\obj\\",
+      "projectPath": "C:\\Users\\pr114067\\Desktop\\Paulo\\estudos\\programacao\\bootcamp-mrv\\ConCad\\ConCad.csproj",
+      "packagesPath": "C:\\Users\\pr114067\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\pr114067\\Desktop\\Paulo\\estudos\\programacao\\bootcamp-mrv\\ConCad\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Paulo\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "C:\\Users\\pr114067\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net6.0"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {}
+        "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net6.0": {
@@ -59,7 +58,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.101\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Users\\pr114067\\Desktop\\Paulo\\dotnet\\dotnet-sdk-6.0.200-win-x64\\sdk\\6.0.200\\RuntimeIdentifierGraph.json"
       }
     }
   }
