@@ -20,17 +20,17 @@ namespace ConCad.Vigas
 						InserirViga();
 						break;
                     case "VZ":
-						VisualizarViga(null);
+						VisualizarViga("");
 						break;
 					case "UP":
 						AtualizarViga();
 						break;
 					case "EX":
 						ExcluirViga();
-						break;/*
+						break;
 					case "CLS":
 						System.Console.Clear();
-						break;*/
+						break;
 
 					default:
 						throw new ArgumentOutOfRangeException();
@@ -45,30 +45,30 @@ namespace ConCad.Vigas
 		private static Viga CriarViga()
 		{
 			System.Console.WriteLine("Largura (cm)");
-			double dimensao_largura = double.Parse(Console.ReadLine());
+			double dimensao_largura = double.Parse(Console.ReadLine()!);
 			System.Console.WriteLine("Altura (cm)");
-			double dimensao_altura = double.Parse(Console.ReadLine());
+			double dimensao_altura = double.Parse(Console.ReadLine()!);
 			System.Console.WriteLine("Comprimento (cm)");
-			double dimensao_comprimento = double.Parse(Console.ReadLine());
+			double dimensao_comprimento = double.Parse(Console.ReadLine()!);
 
 			double[] arr_dimensoes = new double[3]{dimensao_largura,dimensao_altura,dimensao_comprimento};
 
 			System.Console.WriteLine("Bitola positiva (mm)");
-			double bitola_positiva = double.Parse(Console.ReadLine());
+			double bitola_positiva = double.Parse(Console.ReadLine()!);
 			System.Console.WriteLine("Bitola negativa (mm)");
-			double bitola_negativa = double.Parse(Console.ReadLine());
+			double bitola_negativa = double.Parse(Console.ReadLine()!);
 
 			double[] arr_bitolas = new double[2]{bitola_positiva,bitola_negativa};
 
 			System.Console.WriteLine("Qtd positiva");
-			int qtd_positiva = int.Parse(Console.ReadLine());
+			int qtd_positiva = int.Parse(Console.ReadLine()!);
 			System.Console.WriteLine("Qtd negativa");
-			int qtd_negativa = int.Parse(Console.ReadLine());
+			int qtd_negativa = int.Parse(Console.ReadLine()!);
 
 			int[] arr_qtd = new int[2]{qtd_positiva, qtd_negativa};
 			
 			System.Console.WriteLine("Especifique a quantidade de apoios:");
-			int n_apoios = int.Parse(Console.ReadLine());
+			int n_apoios = int.Parse(Console.ReadLine()!);
 
 			List<string> apoios = new List<string>();
 
@@ -77,7 +77,7 @@ namespace ConCad.Vigas
 			while(i <= n_apoios)
 			{
 				System.Console.WriteLine("Escreva o nome do apoio " + i);
-				string apoio = System.Console.ReadLine().ToUpper();
+				string apoio = System.Console.ReadLine()!.ToUpper();
 				apoios.Add(apoio);
 				i++;
 			}
@@ -136,13 +136,13 @@ namespace ConCad.Vigas
 			}
 			else
 			{
-				if(nomeViga == null)
+				if(nomeViga == "")
 				{
 					System.Console.WriteLine("Vigas existentes:");
 					ListarVigas();
 
 					System.Console.WriteLine("Digite o nome de uma das vigas acima para detalhá-la: ");
-					string thisNomeViga = System.Console.ReadLine().ToUpper();
+					string thisNomeViga = System.Console.ReadLine()!.ToUpper();
 					nomeViga = thisNomeViga;
 					System.Console.WriteLine();
 				}
@@ -162,14 +162,14 @@ namespace ConCad.Vigas
 		public static void AtualizarViga()
 		{
 			System.Console.Write("Digite o nome da viga: ");
-			string nomeViga = System.Console.ReadLine().ToUpper(); //int.Parse(System.Console.ReadLine());
+			string nomeViga = System.Console.ReadLine()!.ToUpper(); //int.Parse(System.Console.ReadLine()!);
 
 			if(repositorio.ExisteViga(nomeViga))
 			{
 				VisualizarViga(nomeViga);
 
 				System.Console.WriteLine("Tem certeza que quer atualizar esta viga? (S/N)");
-				string confirma_atualizacao = System.Console.ReadLine().ToUpper();
+				string confirma_atualizacao = System.Console.ReadLine()!.ToUpper();
 				
 				if(confirma_atualizacao == "S")
 				{
@@ -187,14 +187,14 @@ namespace ConCad.Vigas
 		public static void ExcluirViga()
 		{
 			System.Console.Write("Digite o nome da viga: ");
-			string nomeViga = System.Console.ReadLine().ToUpper(); //int.Parse(System.Console.ReadLine());
+			string nomeViga = System.Console.ReadLine()!.ToUpper(); //int.Parse(System.Console.ReadLine()!);
 
 			if(repositorio.ExisteViga(nomeViga))
 			{
 				VisualizarViga(nomeViga);
 
 				System.Console.WriteLine("Tem certeza que quer excluir esta viga? (S/N)");
-				string confirma_exclusao = System.Console.ReadLine().ToUpper();
+				string confirma_exclusao = System.Console.ReadLine()!.ToUpper();
 				
 				if(confirma_exclusao == "S")
 				{
@@ -222,7 +222,7 @@ namespace ConCad.Vigas
 			System.Console.WriteLine("X- Sair");
 			System.Console.WriteLine();
 
-			string opcaoUsuario = System.Console.ReadLine().ToUpper();
+			string opcaoUsuario = System.Console.ReadLine()!.ToUpper();
 			System.Console.WriteLine();
 			return opcaoUsuario;
 		}
