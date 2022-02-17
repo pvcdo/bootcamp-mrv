@@ -7,6 +7,21 @@ namespace ConCad.Vigas
     {
         private List<Viga> vigas = new List<Viga>();
 
+        public bool ExisteViga(string nomeViga)
+        {
+            bool existe = false;
+
+            foreach (var viga in vigas)
+            {
+                if(viga.getNomeViga() == nomeViga)
+                {
+                    System.Console.WriteLine(viga.ToString());
+                    existe = true;
+                }
+            }
+
+            return existe;
+        }
         public List<Viga> ListarVigas()
         {
             return vigas;
@@ -31,6 +46,15 @@ namespace ConCad.Vigas
             }
 
             if(!existe){System.Console.WriteLine("Viga não existente");}
+
+            /*if(ExisteViga(nomeViga))
+            {
+                System.Console.WriteLine(viga.ToString());
+            }
+            else
+            {
+                System.Console.WriteLine("Viga não existente");
+            }*/
         }
 
         public bool AtualizarViga(string nomeViga, Viga novaViga)
