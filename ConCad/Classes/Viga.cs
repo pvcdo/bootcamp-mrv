@@ -18,8 +18,10 @@ namespace ConCad.Vigas
             this.NArmacoes = nArmacoes;
             this.Apoios = apoios;
             this.Excluida = false;
+            this.NomeViga = "V" + id;
         }
 
+        private string NomeViga { get; set; }
         private int [] Dimensoes { get; set; }
         private double [] Bitolas { get; set; }
         private int [] NArmacoes { get; set; }
@@ -42,15 +44,16 @@ namespace ConCad.Vigas
                     {
                         retorno += " - " + apoio;
                     }
+                    contagem++;
                 }
                 return retorno;
             }
 
             string retorno = "";
-            retorno += "Dimensões: " + this.Dimensoes[0] + "(L)" + this.Dimensoes[1] + "(A)" + this.Dimensoes[2] + "(C)" + Environment.NewLine;
+            retorno += "Dimensões: " + this.Dimensoes[0] + "cm (L) " + this.Dimensoes[1] + "cm (A) " + this.Dimensoes[2] + "cm (C) " + Environment.NewLine;
             retorno += "Armação positiva: " + this.NArmacoes[0] + "ø" + this.Bitolas[0] + "mm" + Environment.NewLine;
             retorno += "Armação negativa: " + this.NArmacoes[1] + "ø" + this.Bitolas[1] + "mm" + Environment.NewLine;
-            retorno += "Apoiada em " + retornoApoios();
+            retorno += "Apoiada em " + retornoApoios() + Environment.NewLine;
             
             return retorno;
         }
@@ -70,10 +73,10 @@ namespace ConCad.Vigas
             return this.NArmacoes[0] * this.Bitolas[0];
         }
 
-        public double AlteraBitolaPos(double novaBitola)
+        /*public double AlteraBitolaPos(double novaBitola)
         {
             this.Bitolas[0] = novaBitola;
-        }
+        }*/
 
         public void ExcluirViga(){
             this.Excluida = true;
@@ -82,6 +85,11 @@ namespace ConCad.Vigas
         public bool VigaExcluida()
         {
             return this.Excluida;
+        }
+
+        public string getNomeViga()
+        {
+            return this.NomeViga;
         }
     }
 }
