@@ -4,9 +4,10 @@ namespace ConCad.Vigas.Interfaces
 {
     public interface IRepositorioViga<T>
     {
-         List<T> ListaVigas();
-         void InserirViga();
-         void AtualizarViga();
-         void ExcluirViga();
+         List<T> ListarVigas();
+         void InserirViga(T viga);
+         void VisualizarViga(string nomeViga);
+         bool AtualizarViga(string nomeViga, T novaViga);
+         void ExcluirViga(string nomeViga);
     }
 }

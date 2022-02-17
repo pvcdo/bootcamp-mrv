@@ -1,26 +1,27 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\pr114067\\Desktop\\Paulo\\estudos\\programacao\\bootcamp-mrv\\ConCad\\ConCad.csproj": {}
+    "D:\\Paulo Victor\\Estudos\\Programação\\DIO\\DIO\\Bootcamps\\bootcamp-mrv\\ConCad\\ConCad.csproj": {}
   },
   "projects": {
-    "C:\\Users\\pr114067\\Desktop\\Paulo\\estudos\\programacao\\bootcamp-mrv\\ConCad\\ConCad.csproj": {
+    "D:\\Paulo Victor\\Estudos\\Programação\\DIO\\DIO\\Bootcamps\\bootcamp-mrv\\ConCad\\ConCad.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\pr114067\\Desktop\\Paulo\\estudos\\programacao\\bootcamp-mrv\\ConCad\\ConCad.csproj",
+        "projectUniqueName": "D:\\Paulo Victor\\Estudos\\Programação\\DIO\\DIO\\Bootcamps\\bootcamp-mrv\\ConCad\\ConCad.csproj",
         "projectName": "ConCad",
-        "projectPath": "C:\\Users\\pr114067\\Desktop\\Paulo\\estudos\\programacao\\bootcamp-mrv\\ConCad\\ConCad.csproj",
-        "packagesPath": "C:\\Users\\pr114067\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\pr114067\\Desktop\\Paulo\\estudos\\programacao\\bootcamp-mrv\\ConCad\\obj\\",
+        "projectPath": "D:\\Paulo Victor\\Estudos\\Programação\\DIO\\DIO\\Bootcamps\\bootcamp-mrv\\ConCad\\ConCad.csproj",
+        "packagesPath": "C:\\Users\\Paulo\\.nuget\\packages\\",
+        "outputPath": "D:\\Paulo Victor\\Estudos\\Programação\\DIO\\DIO\\Bootcamps\\bootcamp-mrv\\ConCad\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\pr114067\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\Paulo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
         ],
         "sources": {
-          "https://api.nuget.org/v3/index.json": {}
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {}
         },
         "frameworks": {
           "net6.0": {
@@ -52,7 +53,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Users\\pr114067\\Desktop\\Paulo\\dotnet\\dotnet-sdk-6.0.200-win-x64\\sdk\\6.0.200\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.101\\RuntimeIdentifierGraph.json"
         }
       }
     }

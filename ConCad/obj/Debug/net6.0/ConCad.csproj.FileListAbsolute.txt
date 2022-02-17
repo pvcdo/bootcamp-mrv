@@ -13,3 +13,18 @@ C:\Users\pr114067\Desktop\Paulo\estudos\programacao\bootcamp-mrv\ConCad\obj\Debu
 C:\Users\pr114067\Desktop\Paulo\estudos\programacao\bootcamp-mrv\ConCad\obj\Debug\net6.0\ConCad.pdb
 C:\Users\pr114067\Desktop\Paulo\estudos\programacao\bootcamp-mrv\ConCad\obj\Debug\net6.0\ConCad.genruntimeconfig.cache
 C:\Users\pr114067\Desktop\Paulo\estudos\programacao\bootcamp-mrv\ConCad\obj\Debug\net6.0\ref\ConCad.dll
+D:\Paulo Victor\Estudos\Programação\DIO\DIO\Bootcamps\bootcamp-mrv\ConCad\obj\Debug\net6.0\ConCad.csproj.AssemblyReference.cache
+D:\Paulo Victor\Estudos\Programação\DIO\DIO\Bootcamps\bootcamp-mrv\ConCad\obj\Debug\net6.0\ConCad.GeneratedMSBuildEditorConfig.editorconfig
+D:\Paulo Victor\Estudos\Programação\DIO\DIO\Bootcamps\bootcamp-mrv\ConCad\obj\Debug\net6.0\ConCad.AssemblyInfoInputs.cache
+D:\Paulo Victor\Estudos\Programação\DIO\DIO\Bootcamps\bootcamp-mrv\ConCad\obj\Debug\net6.0\ConCad.AssemblyInfo.cs
+D:\Paulo Victor\Estudos\Programação\DIO\DIO\Bootcamps\bootcamp-mrv\ConCad\obj\Debug\net6.0\ConCad.csproj.CoreCompileInputs.cache
+D:\Paulo Victor\Estudos\Programação\DIO\DIO\Bootcamps\bootcamp-mrv\ConCad\obj\Debug\net6.0\ConCad.dll
+D:\Paulo Victor\Estudos\Programação\DIO\DIO\Bootcamps\bootcamp-mrv\ConCad\obj\Debug\net6.0\ref\ConCad.dll
+D:\Paulo Victor\Estudos\Programação\DIO\DIO\Bootcamps\bootcamp-mrv\ConCad\obj\Debug\net6.0\ConCad.pdb
+D:\Paulo Victor\Estudos\Programação\DIO\DIO\Bootcamps\bootcamp-mrv\ConCad\bin\Debug\net6.0\ConCad.exe
+D:\Paulo Victor\Estudos\Programação\DIO\DIO\Bootcamps\bootcamp-mrv\ConCad\bin\Debug\net6.0\ConCad.deps.json
+D:\Paulo Victor\Estudos\Programação\DIO\DIO\Bootcamps\bootcamp-mrv\ConCad\bin\Debug\net6.0\ConCad.runtimeconfig.json
+D:\Paulo Victor\Estudos\Programação\DIO\DIO\Bootcamps\bootcamp-mrv\ConCad\bin\Debug\net6.0\ConCad.dll
+D:\Paulo Victor\Estudos\Programação\DIO\DIO\Bootcamps\bootcamp-mrv\ConCad\bin\Debug\net6.0\ref\ConCad.dll
+D:\Paulo Victor\Estudos\Programação\DIO\DIO\Bootcamps\bootcamp-mrv\ConCad\bin\Debug\net6.0\ConCad.pdb
+D:\Paulo Victor\Estudos\Programação\DIO\DIO\Bootcamps\bootcamp-mrv\ConCad\obj\Debug\net6.0\ConCad.genruntimeconfig.cache
