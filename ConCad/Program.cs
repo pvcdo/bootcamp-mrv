@@ -20,11 +20,11 @@ namespace ConCad.Vigas
 						InserirViga();
 						break;
                     case "VZ":
-						VisualizarViga();
+						VisualizarViga(null);
 						break;
 					case "UP":
 						AtualizarViga();
-						break;/*
+						break;
 					case "EX":
 						ExcluirViga();
 						break;/*
@@ -45,39 +45,39 @@ namespace ConCad.Vigas
 		private static Viga CriarViga()
 		{
 			System.Console.WriteLine("Largura (cm)");
-			double dimensao_largura = Console.ReadLine();
+			double dimensao_largura = double.Parse(Console.ReadLine());
 			System.Console.WriteLine("Altura (cm)");
-			double dimensao_altura = Console.ReadLine();
+			double dimensao_altura = double.Parse(Console.ReadLine());
 			System.Console.WriteLine("Comprimento (cm)");
-			double dimensao_comprimento = Console.ReadLine();
+			double dimensao_comprimento = double.Parse(Console.ReadLine());
 
-			double[] arr_dimensoes = new int[3]{dimensao_largura,dimensao_altura,dimensao_comprimento};
+			double[] arr_dimensoes = new double[3]{dimensao_largura,dimensao_altura,dimensao_comprimento};
 
 			System.Console.WriteLine("Bitola positiva (mm)");
-			double bitola_positiva = Console.ReadLine();
+			double bitola_positiva = double.Parse(Console.ReadLine());
 			System.Console.WriteLine("Bitola negativa (mm)");
-			double bitola_negativa = Console.ReadLine();
+			double bitola_negativa = double.Parse(Console.ReadLine());
 
-			double[] arr_bitolas = new int[2]{bitola_positiva,bitola_negativa};
+			double[] arr_bitolas = new double[2]{bitola_positiva,bitola_negativa};
 
 			System.Console.WriteLine("Qtd positiva");
-			int qtd_positiva = Console.ReadLine();
+			int qtd_positiva = int.Parse(Console.ReadLine());
 			System.Console.WriteLine("Qtd negativa");
-			int qtd_negativa = Console.ReadLine();
+			int qtd_negativa = int.Parse(Console.ReadLine());
 
 			int[] arr_qtd = new int[2]{qtd_positiva, qtd_negativa};
 			
 			System.Console.WriteLine("Especifique a quantidade de apoios:");
-			string n_apoios = Console.ReadLine();
+			int n_apoios = int.Parse(Console.ReadLine());
 
 			List<string> apoios = new List<string>();
 
 			int i = 1;
 
-			while(i < n_apoios)
+			while(i <= n_apoios)
 			{
 				System.Console.WriteLine("Escreva o nome do apoio " + i);
-				var apoio = System.Console.ReadLine().ToUpper();
+				string apoio = System.Console.ReadLine().ToUpper();
 				apoios.Add(apoio);
 				i++;
 			}
@@ -96,15 +96,23 @@ namespace ConCad.Vigas
         private static void ListarVigas()
 		{
 			var vigas = repositorio.ListarVigas();
+			string statusExcluida = "ativa";
 
 			if(vigas.Count == 0)
 			{
 				System.Console.WriteLine(" >>> Não há nenhuma viga cadastrada <<<");
 			}
-
-			foreach (var viga in vigas)
+			else
 			{
-				System.Console.WriteLine(viga.getNomeViga());
+				foreach (var viga in vigas)
+				{
+		
+					if(viga.VigaExcluida())
+					{
+						statusExcluida = "excluída";
+					}
+					System.Console.WriteLine(viga.getNomeViga() + statusExcluida);
+				}	
 			}
 			
 		}
@@ -120,28 +128,33 @@ namespace ConCad.Vigas
 
 		public static void VisualizarViga(string nomeViga)
 		{	
-			if(nomeViga == null || !nomeViga)
-			{
-				System.Console.WriteLine("Digite o nome da viga:");
-				string thisNomeViga = System.Console.ReadLine().ToUpper();
-				nomeViga = thisNomeViga;
-				System.Console.WriteLine();
-			}
-			
 			var vigas = repositorio.ListarVigas();
 
 			if(vigas.Count == 0)
 			{
 				System.Console.WriteLine(" >>> Não há nenhuma viga cadastrada <<<");
 			}
-
-			if(repositorio.ExisteViga(nomeViga))
-			{
-				repositorio.VisualizarViga(nomeViga);
-			}
 			else
 			{
-				System.Console.WriteLine("Esta viga não está cadastrada.");
+				if(nomeViga == null)
+				{
+					System.Console.WriteLine("Vigas existentes:");
+					ListarVigas();
+
+					System.Console.WriteLine("Digite o nome de uma das vigas acima para detalhá-la: ");
+					string thisNomeViga = System.Console.ReadLine().ToUpper();
+					nomeViga = thisNomeViga;
+					System.Console.WriteLine();
+				}
+
+				if(repositorio.ExisteViga(nomeViga))
+				{
+					repositorio.VisualizarViga(nomeViga);
+				}
+				else
+				{
+					System.Console.WriteLine("Esta viga não está cadastrada.");
+				}
 			}
 
 		}
@@ -149,7 +162,7 @@ namespace ConCad.Vigas
 		public static void AtualizarViga()
 		{
 			System.Console.Write("Digite o nome da viga: ");
-			int nomeViga = System.Console.ReadLine().ToUpper(); //int.Parse(System.Console.ReadLine());
+			string nomeViga = System.Console.ReadLine().ToUpper(); //int.Parse(System.Console.ReadLine());
 
 			if(repositorio.ExisteViga(nomeViga))
 			{
@@ -161,7 +174,7 @@ namespace ConCad.Vigas
 				if(confirma_atualizacao == "S")
 				{
 					repositorio.AtualizarViga(nomeViga,CriarViga());
-					System.Console.WriteLine("Você atualizou a viga");
+					System.Console.WriteLine("Você atualizou a viga " + nomeViga);
 				}
 				else
 				{
@@ -171,6 +184,28 @@ namespace ConCad.Vigas
 			}
 		}
 
+		public static void ExcluirViga()
+		{
+			System.Console.Write("Digite o nome da viga: ");
+			string nomeViga = System.Console.ReadLine().ToUpper(); //int.Parse(System.Console.ReadLine());
+
+			if(repositorio.ExisteViga(nomeViga))
+			{
+				VisualizarViga(nomeViga);
+
+				System.Console.WriteLine("Tem certeza que quer excluir esta viga? (S/N)");
+				string confirma_exclusao = System.Console.ReadLine().ToUpper();
+				
+				if(confirma_exclusao == "S")
+				{
+					repositorio.ExcluirViga(nomeViga);
+				}
+				else
+				{
+					System.Console.WriteLine("Viga " + nomeViga + " não excluída.");
+				}
+			}
+		}
         private static string MenuPrincipal()
 		{
 			System.Console.WriteLine();

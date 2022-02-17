@@ -15,7 +15,6 @@ namespace ConCad.Vigas
             {
                 if(viga.getNomeViga() == nomeViga)
                 {
-                    System.Console.WriteLine(viga.ToString());
                     existe = true;
                 }
             }
